@@ -185,20 +185,19 @@ body{
 .visual-div{
 	position: relative;
 	display: block;
+	width: 518px;
+	height: 240px;
 }
 .visual-div p{
 	position: relative;
 	display: block;
+	font-size: 64px;
 }
 .visual-div a{
 	position: relative;
 	display: inline-block;
 }
 
-.visual-right{
-	position: relative;
-	display: block;
-}
 
 
 .visual-right-img{

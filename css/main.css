@@ -32,6 +32,7 @@ body{
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: -0.45px;
+	overflow-x: hidden;
 }
 
 /* 공통영역 */
@@ -185,19 +186,54 @@ body{
 .visual-div{
 	position: relative;
 	display: block;
-	width: 518px;
-	height: 240px;
+	width: 460px;
+	margin: 153px 0;
 }
-.visual-div p{
+.visual-div h1{
 	position: relative;
 	display: block;
 	font-size: 64px;
+	font-weight: 700;
+	color: #232c3e;
+	letter-spacing: -1px;
+	margin-bottom: 72px;
+	line-height: 1.2;
+	text-align: left;
+
 }
 .visual-div a{
 	position: relative;
 	display: inline-block;
 }
 
+.visual-left-btn{
+	position: relative;
+	padding: 16px 25px;
+	width: 210px;
+
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	color: #fff;
+	background-color: #1c6eff;
+
+	border-radius: 8px;
+}
+.visual-right-btn{
+	position: relative;
+	padding: 16px 25px;
+	margin-left: 16px;
+	width: 210px;
+
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	color: #1c6eff;
+    background-color: #fff;
+
+	border-radius: 8px;
+
+}
 
 
 .visual-right-img{
@@ -215,12 +251,119 @@ body{
 .banner{
 	position: relative;
 	display: block;
+	/* height: 128px; */
+	background-color: #f3feff;
+    padding: 33px 53px;
 }
+.banner-list{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.banner-list li{}
+.banner-list li a{
+	position: relative;
+	display: block;
+	width: 150px;
+	height: 60px;
+}
+
+.banner-img1{
+	background: url('../images/img_skt_logo.png') no-repeat center;
+	background-size: cover;
+}
+.banner-img2{
+	background: url('../images/img_lgu_logo.png') no-repeat center;
+	background-size: cover;
+}
+.banner-img3{
+	background: url('../images/img_kakao_logo.png') no-repeat center;
+	background-size: cover;
+}
+.banner-img4{
+	background: url('../images/img_facebook_logo.png') no-repeat center;
+	background-size: cover;
+}
+.banner-img5{
+	background: url('../images/img_amorepacific_logo.png') no-repeat center;
+	background-size: cover;
+}
+.banner-img6{
+	background: url('../images/img_3M_logo.png') no-repeat center;
+	background-size: cover;
+}
+.banner-img7{
+	background: url('../images/img_zigzag_logo.png') no-repeat center;
+	background-size: cover;
+}
+.banner-img8{
+	background: url('../images/img_hyperconnect_logo.png') no-repeat center;
+	background-size: cover;
+}
+
+
 /* 카테고리 */
 .category{
 	position: relative;
 	display: block;
+	padding: 160px 0;
 }
+.category-inner{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.category .inner{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.category .inner > div {
+	position: relative;
+	display: flex;
+	width: 50%;
+	height: 480px;
+	padding: 80px;
+	align-content: center;
+	flex-wrap: wrap;
+	border: 1px solid red;
+}
+
+.category h2{
+	position: relative;
+	display: block;
+	width: 716px;
+	/* margin: 0 auto; */
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 5.8rem;
+    letter-spacing: -.6px;
+    color: #3e3e3e;
+	text-align: left;
+}
+
+.category .inner > div:nth-child(1){
+	background: url('../images/img_main_marketing.png') no-repeat center;
+	background-size: cover;
+}
+.category .inner > div:nth-child(4){
+	background: url('../images/img_main_panel.png') no-repeat center;
+	background-size: cover;
+}
+.category .inner > div:nth-child(5){
+	background: url('../images/img_main_ux.png') no-repeat center;
+	background-size: cover;
+}
+.category .inner > div:nth-child(8){
+	background: url('../images/img_main_abroad.png') no-repeat center;
+	background-size: cover;
+}
+
+
 /* 플랫폼 */
 .platform{
 	position: relative;

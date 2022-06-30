@@ -469,6 +469,8 @@ body {
 .platform-desc {
 	position: relative;
 	display: block;
+	text-align: left;
+	float: left;
 }
 
 .platform-desc .platform-main-img{
@@ -479,30 +481,316 @@ body {
 	background-size: cover;
 }
 
-.platform-desc-list{
-	position: absolute;
-	right: 0;
-	top: 0;
+.platform-btn-list{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+/* 플랫폼 버튼 리스트 상단 */
+.platform-desc-list-top{
+	position: relative;
 	display: block;
 	width: 468px;
-	height: 298px;
+	/* height: 298px; */
 	background-color: #fafbff;
 
 	border: 0;
 	border-radius: 12px;
 	padding: 12px 24px;
 }
-.platform-desc-list p{
+.platform-desc-list-top > p{
 	position: relative;
 	display: block;
+	color: #343f55;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: left;
+	margin-bottom: 12px;
 }
 
+.platform-btn-top{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_chevron_up.png') no-repeat center;
+	background-size: cover;
+	cursor: pointer;
+
+}
+
+.platform-desc-list-main-top{
+	position: relative;
+	display: block;
+	font-size: 20px;
+	text-align: left;
+	color: #3e3e3e;
+    border-top: 2px solid #bcc3d5;
+    padding-top: 24px;
+	line-height: 3.2rem;
+}
+
+.platform-desc-list-main>span{
+	position: relative;
+	display: block;
+	text-align: left;
+	font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: -.4px;
+    color: #1c6eff;
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+
+.platform-more-btn-top{
+	position: relative;
+	display: block;
+
+	font-size: 20px;
+	font-weight: 700;
+	color: #1c6eff;
+    margin-top: 24px;
+    margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.more-btn-top{
+	position: absolute;
+	left: 110px;
+	bottom: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_forward_medium.png') no-repeat center;
+	background-size: cover;
+}
+/* //플랫폼 버튼 리스트 상단 */
+
+
+/* 플랫폼 버튼 리스트 중단 */
+.platform-desc-list-middle{
+	position: relative;
+	display: inline-block;
+	width: 468px;
+	/* height: 298px; */
+	/* background-color: #fafbff; */
+	background-color: hsla(0,0%,100%,.6);
+
+	border: 0;
+	border-radius: 12px;
+	padding: 12px 24px;
+    margin-top: 16px;
+}
+
+.platform-desc-list-middle > p{
+	position: relative;
+	display: block;
+	color: #343f55;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: left;
+	margin-bottom: 12px;
+}
+
+.platform-btn-middle{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_chevron_up.png') no-repeat center;
+	background-size: cover;
+	transform: rotate(90deg);
+	cursor: pointer;
+
+}
+
+.platform-desc-list-main-middle{
+	position: relative;
+	display: none;
+	font-size: 20px;
+	text-align: left;
+	color: #3e3e3e;
+    border-top: 2px solid #bcc3d5;
+    padding-top: 24px;
+	line-height: 3.2rem;
+}
+
+.platform-more-btn-middle{
+	position: relative;
+	display: block;
+
+	font-size: 20px;
+	font-weight: 700;
+	color: #1c6eff;
+    margin-top: 24px;
+    margin-bottom: 20px;
+	cursor: pointer;
+
+}
+
+.more-btn-middle{
+	position: absolute;
+	left: 110px;
+	bottom: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_forward_medium.png') no-repeat center;
+	background-size: cover;
+}
+/* //플랫폼 버튼 리스트 중단 */
 
 
 
+/* 플랫폼 버튼 리스트 하단 */
+.platform-desc-list-bottom{
+	position: relative;
+	display: inline-block;
+	width: 468px;
+	/* height: 298px; */
+	/* background-color: #fafbff; */
+	background-color: hsla(0,0%,100%,.6);
+	border: 0;
+	border-radius: 12px;
+	padding: 12px 24px;
+	margin-top: 16px;
+}
 
+.platform-desc-list-bottom > p{
+	position: relative;
+	display: block;
+	color: #343f55;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: left;
+	margin-bottom: 12px;
+}
 
+.platform-btn-bottom{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_chevron_up.png') no-repeat center;
+	background-size: cover;
+	transform: rotate(90deg);
+	cursor: pointer;
 
+}
+
+.platform-desc-list-main-bottom{
+	position: relative;
+	display: none;
+	font-size: 20px;
+	text-align: left;
+	color: #3e3e3e;
+    border-top: 2px solid #bcc3d5;
+    padding-top: 24px;
+	line-height: 3.2rem;
+}
+
+.platform-more-btn-bottom{
+	position: relative;
+	display: block;
+
+	font-size: 20px;
+	font-weight: 700;
+	color: #1c6eff;
+    margin-top: 24px;
+    margin-bottom: 20px;
+	cursor: pointer;
+
+}
+
+.more-btn-bottom{
+	position: absolute;
+	left: 110px;
+	bottom: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_forward_medium.png') no-repeat center;
+	background-size: cover;
+}
+
+/* //플랫폼 버튼 리스트 하단 */
+
+/* 클릭시 클로스 */
+.platform-desc-list-main-top-close{
+	position: relative;
+	display: none;
+	font-size: 20px;
+	text-align: left;
+	color: #3e3e3e;
+    border-top: 2px solid #bcc3d5;
+    padding-top: 24px;
+	line-height: 3.2rem;
+}
+.platform-btn-top-close{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_chevron_up.png') no-repeat center;
+	background-size: cover;
+	transform: rotate(90deg);
+}
+
+/* 클릭시 오픈 */
+.platform-desc-list-main-middle-open{
+	position: relative;
+	display: block;
+	font-size: 20px;
+	text-align: left;
+	color: #3e3e3e;
+    border-top: 2px solid #bcc3d5;
+    padding-top: 24px;
+	line-height: 3.2rem;
+}
+
+.platform-btn-middle-open{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_chevron_up.png') no-repeat center;
+	background-size: cover;
+}
+
+.platform-desc-list-main-bottom-open{
+	position: relative;
+	display: block;
+	font-size: 20px;
+	text-align: left;
+	color: #3e3e3e;
+    border-top: 2px solid #bcc3d5;
+    padding-top: 24px;
+	line-height: 3.2rem;
+}
+
+.platform-btn-bottom-open{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url('../images/ic_chevron_up.png') no-repeat center;
+	background-size: cover;
+}
 
 
 

@@ -29,4 +29,5 @@ window.onload = function () {
 		platform_desc_list_main_bottom.toggleClass('platform-desc-list-main-bottom-open')
 		platform_top_img.toggleClass('platform-bottom-img-open')
 	});
+
 };

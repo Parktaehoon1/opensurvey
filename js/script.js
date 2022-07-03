@@ -1,4 +1,17 @@
-$(document).ready();
+$(document).ready(function () {
+	let header = $('.header');
+	let nav = $('.nav');
+	let navH = nav.height();
+
+	nav.mouseenter(function () {
+		header.css('height', navH);
+	});
+	nav.mouseleave(function () {
+		header.css('height', 70);
+	});
+
+
+});
 
 window.onload = function () {
 	let platform_desc_list_main_top = $('.platform-desc-list-main-top')

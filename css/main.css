@@ -70,17 +70,25 @@ body {
 
 /* 헤더 */
 .header {
-	position: relative;
+	position: fixed;
+	left: 0;
+	top: 0;
 	display: block;
+	width: 100%;
 	height: 70px;
 	box-shadow: 0 2px 2px -1px rgb(0 0 0 / 10%);
+
+	background-color: #fff;
+
+	z-index: 999;
+	overflow: hidden;
+	transition: height 0.5s;
 }
 
 .logo-wrap {
 	position: absolute;
 	left: 40px;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 15px;
 	display: block;
 	width: 228px;
 	height: 33px;
@@ -103,8 +111,7 @@ body {
 
 .nav {
 	position: relative;
-	display: flex;
-	justify-content: center;
+	display: block;
 }
 
 
@@ -112,13 +119,12 @@ body {
 	position: relative;
 	display: flex;
 	justify-content: center;
-
+	background-color: #fff;
 }
 
 .gnb>li {
 	position: relative;
 	display: inline;
-	float: left;
 	width: 143px;
 }
 
@@ -161,8 +167,7 @@ body {
 .header-btn-list {
 	position: absolute;
 	right: 40px;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 15px;
 	display: block;
 }
 
@@ -205,7 +210,13 @@ body {
 }
 
 
+.gnb>li:hover .submenu{
+	background-color: #fff;
+}
 
+.gnb>li:hover .mainmenu {
+	
+}
 
 
 
@@ -469,7 +480,6 @@ body {
 .platform {
 	position: relative;
 	display: block;
-	height: 1056px;
 	background-color: #dff9fb;
 }
 
@@ -875,7 +885,59 @@ body {
 .report {
 	position: relative;
 	display: block;
+	padding: 160px 0;
 }
+
+.report .inner{
+	position: relative;
+	display: block;
+}
+
+.report-title{
+	position: relative;
+	display: block;
+}
+.report-title h2{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	max-width: 710px;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 5.8rem;
+    color: #3e3e3e;
+}
+.report-title a{
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	padding: 12px 20px;
+	
+	font-size: 20px;
+	font-weight: 700;
+	color: #1c6eff;
+	background: #ebf2ff;
+
+	border-radius: 15px;
+}
+
+.report-title a::after{
+	content: '';
+	position: relative;
+	display: block;
+	float: right;
+	margin-left: 12px;
+	margin-top: 2px;
+	width: 24px;
+	height: 24px;
+
+	background: url('../images/ic_forward_medium.png') no-repeat center;
+	background-size: cover;
+}
+
+
 
 /* 데이터 */
 .data {

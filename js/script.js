@@ -43,4 +43,16 @@ window.onload = function () {
 		platform_top_img.toggleClass('platform-bottom-img-open')
 	});
 
+
+	new Swiper('.sw-slide', {
+		slidesPerView: 4,
+		loop: true,
+		navigation: {
+      nextEl: '.sw-control-next',
+      prevEl: '.sw-control-prev'
+    },
+	})
+
 };
+
+

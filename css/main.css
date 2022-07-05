@@ -1032,6 +1032,24 @@ body {
 	position: relative;
 	display: block;
 	background-color: #e5fdff;
+	padding: 160px 0 315px;
+}
+
+.slide .inner{
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.sw-logo{
+	position: relative;
+	display: flex;
+}
+
+.sw-slide{
+	position: relative;
+	display: block;
+	margin-top: 80px;
 }
 
 .slide-title{
@@ -1042,14 +1060,243 @@ body {
 	color: #3e3e3e;
 }
 
+.sw-section{
+	background: #fff;
+  width: 288px;
+	height: 400px;
+  box-shadow: 0 0 24px rgb(72 76 77 / 16%);
+  border-radius: 24px;
+  padding: 30px 24px;
+	margin-right: 10px;
+}
+.sw-section img {
+	width: 240px;
+	height: 50px;
+}
+.slide-company{
+	margin-top: 24px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: -.6px;
+	color: #343f55;
+}
+
+.slide-name{
+	margin-top: 8px;
+	height: 22px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: -.6px;
+	color: #949eb2;
+}
+.slide-desc{
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: -.6px;
+	color: #3e3e3e;
+}
+
+.sw-control{
+	position: relative;
+	display: block;
+	margin-top: 80px;
+}
+
+.sw-control-next{
+	float: right;
+	position: relative;
+	display: block;
+	margin-right: 10px;
+	width: 48px;
+	height: 48px;
+}
+.sw-control-prev{
+	float: right;
+	position: relative;
+	display: block;
+	width: 48px;
+	height: 48px;
+}
+
 /* 문의 */
 .require {
 	position: relative;
 	display: block;
+	height: 312px;
 }
+
+.require .inner{
+	position: relative;
+	display: block;
+}
+
+.require-main{
+	position: absolute;
+	left: 0;
+	top: -50%;
+	transform: translateY(-50%);
+	display: block;
+	width: 100%;
+	background: linear-gradient(180deg,#1c6eff,#649cff);
+	border-radius: 24px;
+	padding: 80px 140px;
+}
+.require-top{
+	position: relative;
+	display: block;
+	margin-bottom: 32px;
+}
+.require-title{
+	position: relative;
+	display: block;
+	float: left;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -.6px;
+	color: #fff;
+}
+.require-btn{
+	position: relative;
+	display: block;
+	float: right;
+	background-color: #fff;
+  border-radius: 8px;
+  padding: 16px 25px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -.4px;
+  color: #1c6eff;
+  width: 210px;
+}
+.require-main p{
+	position: relative;
+	display: block;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: -.6px;
+	color: #fff;
+}
+
 
 /* 푸터 */
 .footer {
+	position: relative;
+	display: block;
+  padding-top: 80px;
+  padding-bottom: 140px;
+	background-color: #343f55;
+}
+
+.footer .inner{
+	position: relative;
+	display: block;
+}
+.footer-top{
+	position: relative;
+	display: block;
+}
+.footer-logo{
+	position: relative;
+	display: block;
+	width: 164px;
+	height: 24px;
+	margin-right: 60px;
+	background: url('../images/logo_white.svg') no-repeat center;
+	background-size: cover;
+
+	float: left;
+}
+.footer-list{
+	position: relative;
+	display: block;
+	float: left;
+}
+.footer-depth1{
+	position: relative;
+	display: block;
+}
+.footer-depth1 li{
+	position: relative;
+	display: block;
+	float: left;
+	padding: 0 32px;
+}
+.footer-depth1 li a{
+	position: relative;
+	display: block;
+	font-size: 18px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.footer-logo-list{
+	position: relative;
+	display: block;
+}
+.footer-fb{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url('../images/facebook_icon.png') no-repeat center;
+	background-size: cover;
+
+	float: right;
+	margin-left: 10px;
+}
+.footer-nv{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url('../images/naver_icon.png') no-repeat center;
+	background-size: cover;
+
+	float: right;
+}
+
+.footer-bottom{
+	position: relative;
+	display: block;
+	margin-top: 85px;
+}
+.footer-bottom-left{
+	position: relative;
+	display: block;
+	float: left;
+}
+.copy{
+	position: relative;
+	display: block;
+}
+.address{
+	position: relative;
+	display: block;
+	margin-top: 15px;
+}
+.footer-bottom-right{
+	position: relative;
+	display: block;
+}
+.footer-depth2{
+	position: relative;
+	display: block;
+	float: right;
+}
+.footer-depth2 li{
+	position: relative;
+	display: block;
+	float: left;
+	padding-top: 20px;
+}
+
+.footer-depth2 li a{
 	position: relative;
 	display: block;
 }

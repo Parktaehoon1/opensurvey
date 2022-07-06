@@ -25,7 +25,10 @@
 	<!--[if lt IE 9]> 
       	<script src="js/html5shiv.js"></script>
   	<![endif]-->
+	<!-- 폰트어썸 -->
+	<script src="https://kit.fontawesome.com/429f5509fa.js" crossorigin="anonymous"></script>
 	<!-- 스와이프 -->
+
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
@@ -38,12 +41,60 @@
 <body>
 	<!-- 전체영역 -->
 	<div class="wrap">
+		<!-- 모바일 버튼 -->
+		<a href="#" class="mb-bt"></a>
+
+
+		<!-- 모바일 메뉴 -->
+		<div class="mb-wrap">
+			<div class="mb-nav">
+				<div class="mb-logo-wrap">
+					<a href="#" class="mb-logo">logo</a>
+				</div>
+				<ul class="mb-gnb">
+					<li>
+						<a href="#" class="mb-mainmenu">서비스</a>
+						<ul class="mb-submenu">
+							<li><a href="#">마케팅 리서치</a></li>
+							<li><a href="#">기업 고객 자문단</a></li>
+							<li><a href="#">UX 리서치</a></li>
+							<li><a href="#">해외 리서치</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="mb-mainmenu">프로덕트</a>
+						<ul class="mb-submenu">
+							<li><a href="#">서베이 플랫폼</a></li>
+							<li><a href="#">데이터 수집 앱</a></li>
+							<li><a href="#">데이터 분석 플랫폼</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="mb-mainmenu">데이터</a>
+					</li>
+					<li>
+						<a href="#" class="mb-mainmenu">블로그</a>
+						<ul class="mb-submenu">
+							<li><a href="#">뉴스</a></li>
+							<li><a href="#">트렌드 리포트</a></li>
+							<li><a href="#">아티클</a></li>
+							<li><a href="#">리서치 팁</a></li>
+							<li><a href="#">오픈서베이 팀</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="mb-mainmenu">고객센터
+							<img class="gnb-img" src="images/ic_sorting_up.png" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<!-- 헤더 -->
 		<header class="header">
 			<div class="logo-wrap">
 				<a href="#" class="logo">logo</a>
 			</div>
-
 
 			<div class="nav">
 				<ul class="gnb">
@@ -84,6 +135,7 @@
 					</li>
 				</ul>
 			</div>
+
 			<div class="header-btn-list clearfix">
 				<button class="header-btn-left">지금 문의하기</button>
 				<button class="header-btn-right">로그인</button>
@@ -284,7 +336,8 @@
 		<section class="slide">
 			<div class="inner">
 				<h2 class="slide-title">시대를 앞서가는 기업이 오픈서베이와 함께합니다.</h2>
-
+			</div>
+			<div class="slide-inner">
 				<div class="swiper-container sw-slide">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide sw-section">
@@ -297,14 +350,18 @@
 								소비자에 대해 품고 있는 다양한 가설을 검증하기 위한 빠르고 정확한 전략이 바로 오픈서베이입니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_cj.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_cj.png" alt="">
+							</div>
 							<p class="slide-company">한국) Trend&Insight</p>
 							<p class="slide-name">김강희 님</p>
 							<p class="slide-desc">오픈서베이는 항상 소비자의 시선으로 제품을 만들려는 저희의 노력을 잘 이해하는 파트너입니다.
 								국내 주요 조사업체 중 가장 빠르게 소비자 의견을 수집할 수 있으며, 함께 데이터 자산을 함께 쌓아가고 있어 더욱 든든합니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_brothers.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_brothers.png" alt="">
+							</div>
 							<p class="slide-company">CX센터 프로덕트비저닝팀</p>
 							<p class="slide-name"></p>
 							<p class="slide-desc">
@@ -313,28 +370,36 @@
 							</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_toss.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_toss.png" alt="">
+							</div>
 							<p class="slide-company">Brand platform team</p>
 							<p class="slide-name">이정효 브랜드매니저님</p>
 							<p class="slide-desc">차별화되고 시의성 있는 브랜드 경험을 설계하기 위해서는 빠르고 정확한 브랜드 진단이 필요합니다. 토스는 오픈서베이와 함께 보다 객관적인 지표를
 								확보하고, 정성적인 데이터를 수집을 통해 브랜드 진단을 하고 있습니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_nexon.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_nexon.png" alt="">
+							</div>
 							<p class="slide-company">UX실</p>
 							<p class="slide-name">성병관 님</p>
 							<p class="slide-desc">국내외 이용자의 생각과 행동 등 의미 있는 데이터를 빠르고 정확하게 수집할 수 있었습니다. 수집 이후 제공되는 오픈 애널리틱스는 수집 된 데이터를 쉽고
 								빠르게 분석해볼 수 있다는 점에서 매우 편리합니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_riiid.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_riiid.png" alt="">
+							</div>
 							<p class="slide-company">Global Brand Strategy</p>
 							<p class="slide-name">조세원 상무님</p>
 							<p class="slide-desc">세상에 없던 산업을 기존 방식으로 정의하기는 어렵습니다. 뤼이드는 오픈서베이와 함께 브랜드가 속한 카테고리를 정의하고 카테고리 전반과 브랜드 퍼포먼스에
 								대한 소비자의 생각을 데이터로 확인하고 있습니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_watcha.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_watcha.png" alt="">
+							</div>
 							<p class="slide-company">마케팅팀</p>
 							<p class="slide-name"></p>
 							<p class="slide-desc">경쟁이 치열한 시장에서 대체 불가능한 서비스가 되기 위한 노력은 사용자와 시장에 대한 이해로부터 시작됩니다.
@@ -342,7 +407,9 @@
 								내부 데이터만으로 파악하기 힘든 시장 전반 현황과 사용자의 태도와 생각을 오픈서베이와 함께 촘촘히 살펴보고 있습니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_socar.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_socar.png" alt="">
+							</div>
 							<p class="slide-company">브랜드 그룹</p>
 							<p class="slide-name">김미루 그룹장님</p>
 							<p class="slide-desc">국내외 이용자의 생각과 행동 등 의미 있는 데이터를 빠르고 정확하게 수집할 수 있었습니다.
@@ -350,7 +417,9 @@
 								수집 이후 제공되는 오픈 애널리틱스는 수집된 데이터를 쉽고 빠르게 분석해볼 수 있다는 점에서 매우 편리합니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_jb.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_jb.png" alt="">
+							</div>
 							<p class="slide-company">마케팅실</p>
 							<p class="slide-name"></p>
 							<p class="slide-desc">사용자 기반의 분석 플랫폼과 신속한 대응력 덕분에 브랜드를 관리하는 데 큰 도움이 되고 있습니다.
@@ -358,7 +427,9 @@
 								작은 요청에도 진정성있는 마인드와 서비스로 답해주셔서, 좋은 파트너쉽을 이어나가고 있습니다.</p>
 						</div>
 						<div class="swiper-slide sw-section">
-							<img src="images/img_logo_ebey_korea.png" alt="">
+							<div class="sw-logo">
+								<img src="images/img_logo_ebey_korea.png" alt="">
+							</div>
 							<p class="slide-company" style="font-size: 16px;">PXC,Product & Data Strategy cell</p>
 							<p class="slide-name">이슬기 매니저님</p>
 							<p class="slide-desc">이커머스 서비스 사용 행태가 급격하게 변화함에 따라 다양한 사용자층을 이해하고 분석이 필요합니다.
@@ -367,60 +438,65 @@
 					</div>
 
 					<div class="sw-control clearfix">
-						<button class="sw-control-prev"></button>
-						<button class="sw-control-next"></button>
+						<button class="sw-control-next">
+							<i class="fa-solid fa-angle-right"></i>
+						</button>
+						<button class="sw-control-prev">
+							<i class="fa-solid fa-angle-left"></i>
+						</button>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- 문의 -->
-		<section class="require">
-			<div class="inner">
-				<div class="require-main">
-					<div class="require-top clearfix">
-						<h2 class="require-title">지금 바로 문의하세요</h2>
-						<a href="#" class="require-btn">문의하기</a>
-					</div>
-					<p>비지니스 고민만 가져오세요.</p>
-					<p>오픈서베이 팀이 최적의 솔루션을 제안합니다.</p>
+	</div>
+	</section>
+	<!-- 문의 -->
+	<section class="require">
+		<div class="inner">
+			<div class="require-main">
+				<div class="require-top clearfix">
+					<h2 class="require-title">지금 바로 문의하세요</h2>
+					<a href="#" class="require-btn">문의하기</a>
+				</div>
+				<p>비지니스 고민만 가져오세요.</p>
+				<p>오픈서베이 팀이 최적의 솔루션을 제안합니다.</p>
+			</div>
+		</div>
+	</section>
+	<!-- 푸터 -->
+	<footer class="footer">
+		<div class="inner">
+			<div class="footer-top clearfix">
+				<a href="#" class="footer-logo"></a>
+				<div class="footer-list clearfix">
+					<ul class="footer-depth1 clearfix">
+						<li><a href="#">뉴스레터 신청</a></li>
+						<li><a href="#">블로그</a></li>
+						<li><a href="#">커리어</a></li>
+						<li><a href="#">고객센터</a></li>
+					</ul>
+				</div>
+				<div class="footer-logo-list clearfix">
+					<a href="#" class="footer-fb"></a>
+					<a href="#" class="footer-nv"></a>
 				</div>
 			</div>
-		</section>
-		<!-- 푸터 -->
-		<footer class="footer">
-			<div class="inner">
-				<div class="footer-top clearfix">
-					<a href="#" class="footer-logo"></a>
-					<div class="footer-list clearfix">
-						<ul class="footer-depth1 clearfix">
-							<li><a href="#">뉴스레터 신청</a></li>
-							<li><a href="#">블로그</a></li>
-							<li><a href="#">커리어</a></li>
-							<li><a href="#">고객센터</a></li>
-						</ul>
-					</div>
-					<div class="footer-logo-list clearfix">
-						<a href="#" class="footer-fb"></a>
-						<a href="#" class="footer-nv"></a>
-					</div>
+
+			<div class="footer-bottom clearfix">
+				<div class="footer-bottom-left">
+					<p class="copy">Opensurvey Inc.</p>
+					<p class="address">서울특별시 강남구 강남대로84길 13 KR타워 12층 (주)오픈서베이</p>
 				</div>
-
-				<div class="footer-bottom clearfix">
-					<div class="footer-bottom-left">
-						<p class="copy">Opensurvey Inc.</p>
-						<p class="address">서울특별시 강남구 강남대로84길 13 KR타워 12층 (주)오픈서베이</p>
-					</div>
-					<div class="footer-bottom-right clearfix">
-						<ul class="footer-depth2">
-							<li><a href="#">이용약관</a></li>
-							<li><a href="#">개인정보처리방침</a></li>
-						</ul>
-					</div>
+				<div class="footer-bottom-right clearfix">
+					<ul class="footer-depth2">
+						<li><a href="#" class="footer-use">이용약관</a></li>
+						<li><a href="#" class="footer-info">개인정보처리방침</a></li>
+					</ul>
 				</div>
-
-
 			</div>
-		</footer>
+
+
+		</div>
+	</footer>
 	</div>
 </body>
 

@@ -46,10 +46,14 @@ window.onload = function () {
 
 	new Swiper('.sw-slide', {
 		slidesPerView: 4,
+		slidesPerGroup: 4,
+		spaceBetween : 15,
+		loopFillGroupWithBlank : true,
+		allowTouchMove:false,
 		loop: true,
 		navigation: {
-      nextEl: '.sw-control-next',
-      prevEl: '.sw-control-prev'
+      prevEl: '.sw-control-prev',
+      nextEl: '.sw-control-next'
     },
 	})
 

@@ -124,17 +124,19 @@ body {
 
 .gnb>li {
 	position: relative;
-	display: inline;
+	display: block;
 	width: 143px;
+	margin-right: 20px;
 }
+
 
 .gnb>li>a {
 	position: relative;
-	display: block;
+	display: inline-block;
 	font-size: 18px;
 	color: #3e3e3e;
 	font-weight: 700;
-	padding: 22px 0;
+	padding: 22px 0 10px 0;
 }
 
 .gnb-img {
@@ -148,19 +150,21 @@ body {
 	display: block;
 	width: 100vw;
 	height: calc(100% - 70px);
-
+	padding-top: 15px;
 }
 
 .submenu li{
 	position: relative;
 	display: block;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
+	margin-top: 8px;
+
 }
 .submenu li a{
 	position: relative;
 	display: block;
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 
@@ -187,7 +191,7 @@ body {
 
 	border-radius: 8px;
 	border: 0;
-
+	cursor: pointer;
 }
 
 .header-btn-right {
@@ -207,6 +211,8 @@ body {
 	margin-left: 24px;
 	border-radius: 8px;
 	border: 0;
+	cursor: pointer;
+
 }
 
 
@@ -214,9 +220,101 @@ body {
 	background-color: #fff;
 }
 
-.gnb>li:hover .mainmenu {
-	
+.mainmenu::before {
+	content: '';
+	position: absolute; 
+	background-color: #1c6eff;
+	height: 3px;
+
+	width: 0; 
+	bottom: 0; 
 }
+
+.mainmenu:hover::before {
+	width: 100%;
+}
+
+.gnb>li:hover .mainmenu::before{
+	width: 100%;
+}
+
+.gnb>li>a:last-child:hover {
+	color: #1c6eff;
+}
+
+/* 포커스유지 */
+.mainmenu::before:hover .submenu{
+	border-bottom: 1px solid #1c6eff;
+}
+
+.submenu li a:hover {
+	color: #1c6eff;
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+/* 모바일 */
+.mb-bt{
+	position: fixed;
+	right: 15px;
+	top: 23px;
+	display: none;
+	width: 24px;
+	height: 24px;
+	background: url('../images/header1200.png') no-repeat center;
+	background-size: cover;
+	z-index: 99999;
+}
+
+
+.mb-wrap{
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100%;
+  padding: 0 20px;
+
+  background-color: #fff;
+  z-index: 99998;
+  transition: all 0.3s;
+}
+
+.mb-wrap-open{
+	display: block;
+}
+.mb-logo-wrap{
+	position: relative;
+	display: block;
+	padding: 30px 0;
+}
+
+.mb-logo{
+	position: relative;
+	display: block;
+	width: 228px;
+	height: 24px;
+
+	background: url('../images/logo.svg') no-repeat center;
+	background-size: cover;
+	font-size: 0;
+	z-index: 9;
+}
+
+/* 반응형  */
+@media all and (max-width: 1200px){
+	.nav{
+		display: none;
+	}
+	.header-btn-list{
+		display: none;
+	}
+	.mb-bt{
+		display: block;
+	}
+}
+
+
+
 
 
 
@@ -896,6 +994,7 @@ body {
 .report-title{
 	position: relative;
 	display: block;
+	height: 116px;
 }
 .report-title h2{
 	position: absolute;
@@ -940,7 +1039,8 @@ body {
 
 .report-list{
 	position: relative;
-	display: block;
+	display: block;	
+	margin: 76px auto 0;
 }
 .report-list-gnb{
 	position: relative;
@@ -1041,10 +1141,21 @@ body {
 	overflow: hidden;
 }
 
+.slide-inner{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 1224px;
+	margin: 0 auto;
+}
+
 .sw-logo{
 	position: relative;
 	display: flex;
+	width: 42px;
+	height: 42px;
 }
+
 
 .sw-slide{
 	position: relative;
@@ -1061,18 +1172,17 @@ body {
 }
 
 .sw-section{
+	position: relative;
+	display: block;
 	background: #fff;
-  width: 288px;
+  width: 288px ;
 	height: 400px;
   box-shadow: 0 0 24px rgb(72 76 77 / 16%);
   border-radius: 24px;
   padding: 30px 24px;
-	margin-right: 10px;
+	/* margin-left: 0; */
 }
-.sw-section img {
-	width: 240px;
-	height: 50px;
-}
+
 .slide-company{
 	margin-top: 24px;
 	font-weight: 600;
@@ -1112,13 +1222,33 @@ body {
 	margin-right: 10px;
 	width: 48px;
 	height: 48px;
+	background-color: #fff;
+	padding: 12px;
+
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 10px;
 }
+
 .sw-control-prev{
 	float: right;
 	position: relative;
 	display: block;
 	width: 48px;
 	height: 48px;
+	background-color: #fff;
+	padding: 12px;
+
+
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.sw-control button:hover{
+	background-color: #f6f7fb;
+	transition: all 0.5s;
 }
 
 /* 문의 */
@@ -1206,16 +1336,19 @@ body {
 	display: block;
 	width: 164px;
 	height: 24px;
+	margin-top: 10px;
 	margin-right: 60px;
 	background: url('../images/logo_white.svg') no-repeat center;
 	background-size: cover;
 
 	float: left;
+	z-index: 9;
 }
 .footer-list{
 	position: relative;
 	display: block;
 	float: left;
+	line-height: 40px;
 }
 .footer-depth1{
 	position: relative;
@@ -1226,6 +1359,7 @@ body {
 	display: block;
 	float: left;
 	padding: 0 32px;
+	cursor: pointer;
 }
 .footer-depth1 li a{
 	position: relative;
@@ -1233,6 +1367,7 @@ body {
 	font-size: 18px;
 	font-weight: 700;
 	color: #fff;
+	z-index: 9;
 }
 
 .footer-logo-list{
@@ -1244,7 +1379,7 @@ body {
 	display: block;
 	width: 40px;
 	height: 40px;
-	background: url('../images/facebook_icon.png') no-repeat center;
+	background: url('../images/naver_icon.png') no-repeat center;
 	background-size: cover;
 
 	float: right;
@@ -1255,7 +1390,7 @@ body {
 	display: block;
 	width: 40px;
 	height: 40px;
-	background: url('../images/naver_icon.png') no-repeat center;
+	background: url('../images/facebook_icon.png') no-repeat center;
 	background-size: cover;
 
 	float: right;
@@ -1271,6 +1406,13 @@ body {
 	display: block;
 	float: left;
 }
+
+.footer-bottom-left p {
+	color: #9fabc5;
+  font-size: 14px;
+}
+
+
 .copy{
 	position: relative;
 	display: block;
@@ -1288,6 +1430,7 @@ body {
 	position: relative;
 	display: block;
 	float: right;
+	padding-top: 10px;
 }
 .footer-depth2 li{
 	position: relative;
@@ -1299,4 +1442,11 @@ body {
 .footer-depth2 li a{
 	position: relative;
 	display: block;
+	font-size: 18px;
+	color: #fff;
+}
+
+.footer-info{
+	padding-left: 40px;
+	font-weight: 700;
 }

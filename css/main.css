@@ -1012,10 +1012,12 @@ body {
 	display: block;
 	background-color: #fafbff;
 
-	border: 0;
-	border-radius: 12px;
-	padding: 12px 24px;
-	margin-top: 16px;
+	font-size: 20px;
+	text-align: left;
+	color: #3e3e3e;
+	border-top: 2px solid #bcc3d5;
+	padding-top: 24px;
+	line-height: 3.2rem;
 }
 
 

@@ -19,8 +19,6 @@
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<title>오픈서베이</title>
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="js/prefixfree.min.js"></script>
 	<!--[if lt IE 9]> 
       	<script src="js/html5shiv.js"></script>
@@ -33,6 +31,7 @@
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 	<script src="js/respond.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/reset.css"> <!-- 사용자 지정 -->
 	<script src="js/script.js"></script>
 	<link rel="stylesheet" href="css/main.css">
@@ -48,12 +47,10 @@
 		<!-- 모바일 메뉴 -->
 		<div class="mb-wrap">
 			<div class="mb-nav">
-				<div class="mb-logo-wrap">
-					<a href="#" class="mb-logo">logo</a>
-				</div>
 				<ul class="mb-gnb">
-					<li>
+					<li class="clearfix">
 						<a href="#" class="mb-mainmenu">서비스</a>
+						<img src="images/ic_chevron_down.png" alt="">
 						<ul class="mb-submenu">
 							<li><a href="#">마케팅 리서치</a></li>
 							<li><a href="#">기업 고객 자문단</a></li>
@@ -61,8 +58,9 @@
 							<li><a href="#">해외 리서치</a></li>
 						</ul>
 					</li>
-					<li>
+					<li class="clearfix">
 						<a href="#" class="mb-mainmenu">프로덕트</a>
+						<img src="images/ic_chevron_down.png" alt="">
 						<ul class="mb-submenu">
 							<li><a href="#">서베이 플랫폼</a></li>
 							<li><a href="#">데이터 수집 앱</a></li>
@@ -72,8 +70,9 @@
 					<li>
 						<a href="#" class="mb-mainmenu">데이터</a>
 					</li>
-					<li>
+					<li class="clearfix">
 						<a href="#" class="mb-mainmenu">블로그</a>
+						<img src="images/ic_chevron_down.png" alt="">
 						<ul class="mb-submenu">
 							<li><a href="#">뉴스</a></li>
 							<li><a href="#">트렌드 리포트</a></li>
@@ -88,6 +87,10 @@
 						</a>
 					</li>
 				</ul>
+				<div class="mb-nav-btn clearfix">
+				<button class="mb-nav-btn-left">지금 문의하기</button>
+				<button class="mb-nav-btn-right">로그인</button>
+				</div>
 			</div>
 		</div>
 		<!-- 헤더 -->
@@ -262,7 +265,7 @@
 						<a class="platform-btn-bottom"></a>
 						<div class="platform-desc-list-main-bottom">
 							<p>누구나 소비자 데이터를 편리하게 분석해 인사이트를 얻을 수 있습니다. 알고리즘이 쓴 자동 보고서가 제공됩니다. </p>
-							<span class="platform-more-btn">더 알아보기
+							<span class="platform-more-btn-bottom">더 알아보기
 								<a href="#" class="more-btn-bottom"></a>
 							</span>
 					</button>

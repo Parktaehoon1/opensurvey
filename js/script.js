@@ -1,30 +1,30 @@
 window.onload = function () {
 	// 안내창
   // 추가기능 : 스크롤바 없애기
-  $('html').css('overflow', 'hidden');
-  // 
+//   $('html').css('overflow', 'hidden');
+//   // 
 
-  let modalWrap = $('.modal-wrap');
-  let modalClose = $('.modal-close');
+//   let modalWrap = $('.modal-wrap');
+//   let modalClose = $('.modal-close');
   
 
-  modalClose.click(function(){
-    modalWrap.stop().fadeOut(500)
-    // 추가기능 : 스크롤바 살리기
-    $('html').css('overflow', 'auto');
-  });
-  let modalMain = $('.madal-main')
-  //내용 배경 클릭
-  modalMain.click(function(event){
-    // 클릭 정보 전달 막기
-    event.stopPropagation();
-  });
-  //전체 배경 클릭
-  modalWrap.click(function(){
-    modalWrap.stop().fadeOut(500)
-    // 추가기능 : 스크롤바 살리기
-    $('html').css('overflow', 'auto');
-  });
+//   modalClose.click(function(){
+//     modalWrap.stop().fadeOut(500)
+//     // 추가기능 : 스크롤바 살리기
+//     $('html').css('overflow', 'auto');
+//   });
+//   let modalMain = $('.modal-main')
+//   //내용 배경 클릭
+//   modalMain.click(function(event){
+//     // 클릭 정보 전달 막기
+//     event.stopPropagation();
+//   });
+//   //전체 배경 클릭
+//   modalWrap.click(function(){
+//     modalWrap.stop().fadeOut(500)
+//     // 추가기능 : 스크롤바 살리기
+//     $('html').css('overflow', 'auto');
+//   });
   
 
 
@@ -87,14 +87,12 @@ window.onload = function () {
 	// mb-bt 클릭시 mb-wrap 나오기
 	let mb_bt =$('.mb-bt');
 	let mb_wrap = $('.mb-wrap');
-	let mb_bt_open = $('mb-bt-open')
+	let mb_bt_open = $('.mb-bt-open')
 	mb_bt.click(function(){
 		// mb_wrap.toggleClass('mb-wrap-open')		
-		mb_bt.toggleClass('mb-bt-open').fadeIn(500)
-		mb_wrap.stop().animate({
-			left: 0,
-			top:70,
-		}, 1000)
+		mb_bt.toggleClass('mb-bt-open').fadeIn(500);
+		mb_wrap.toggleClass('mb-wrap-on');
+
 	});
 	// mb_bt_open.click(function(){
 	// 	mb_wrap.stop().animate({

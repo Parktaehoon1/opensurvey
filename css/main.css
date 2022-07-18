@@ -59,6 +59,83 @@ body {
 	width: 1200px;
 	margin: 0 auto;
 }
+/* 안내창 */
+.modal-wrap{
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+
+  z-index: 99999;
+}
+.modal-main{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px 0 rgb(0 0 0 / 70%);
+  border: 5px solid rgba(0, 0, 0, 0.1);
+}
+.modal-main h1{
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  padding: 20px 0;
+}
+.modal-main p{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: #111;
+  line-height: 1.8;
+}
+.modal-main b{
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ed1c24;
+}
+.modal-main strong{
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ed1c24;
+}
+.modal-main h2{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  padding: 20px 0;
+}
+
+.modal-main .modal-list{
+  text-align:left;
+  padding: 10px 80px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 0;
+  cursor: pointer;
+  font-size: 25px;
+  background: transparent;
+  color: #999;
+  transition: transform 0.5s;
+}
+
+.modal-close:hover{
+  transform: rotate(180deg);
+}
 
 
 
@@ -76,7 +153,7 @@ body {
 	display: block;
 	width: 100%;
 	height: 70px;
-	/* overflow: hidden; */
+	overflow: hidden;
 	box-shadow: 0 2px 2px -1px rgb(0 0 0 / 10%);
 
 	background-color: #fff;
@@ -269,7 +346,7 @@ body {
 	height: 24px;
 	background: url('../images/header1200.png') no-repeat center;
 	background-size: cover;
-	z-index: 99999;
+	z-index: 99998;
 }
 .mb-bt-open{
 	position: fixed;
@@ -285,14 +362,26 @@ body {
 
 .mb-wrap{
   position: absolute;
-	right: -700px;
+	right: -100%;
 	top: 70px;
 	display: block;
+	width: 100%;
+	height: 100%;
   padding: 0 20px;
 
   background-color: #fff;
   z-index: 99998;
 }
+/* .mb-wrap{
+  position: relative;
+	display: block;
+  padding: 0 20px;
+
+  background-color: #fff;
+  z-index: 99998;
+} */
+
+
 
 .mb-wrap-open{
 	position: absolute;
@@ -413,18 +502,22 @@ body {
 	position: relative;
 	display: block;
 	background-color: #c8fcff;
+	width: 100%;
 	height: 720px;
-	z-index: -1;
+	/* z-index: -1; */
+	padding-top: 70px;
 }
 
 .visual .inner {
 	position: relative;
 	display: block;
+
 }
 
 .visual-left {
 	position: relative;
-	display: block;
+	display: inline-block;
+	/* float: left; */
 }
 
 .visual-div {
@@ -482,10 +575,7 @@ body {
 
 }
 
-
 .visual-right-img {
-	background: url('../images/img_main.png') no-repeat center;
-	background-size: cover;
 	position: absolute;
 	top: 0;
 	left: 600px;
@@ -494,11 +584,35 @@ body {
 	height: 720px;
 }
 
+
+@media all and (max-width: 1200px){
+	.visual{
+		position: relative;
+		display: block;
+		max-height: 900px;
+	}
+	.visual-left{
+		display: block;
+		width: 100vw;
+		height: 100vw;
+	}
+
+	.visual-right-img{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		
+		display: block;
+		width: 100vw;
+		height: 100%;
+	}
+}
+
 /* 배너 */
 .banner {
 	position: relative;
 	display: block;
-	/* height: 128px; */
+	height: 128px;
 	background-color: #f3feff;
 	padding: 33px 53px;
 }
@@ -559,6 +673,35 @@ body {
 .banner-img8 {
 	background: url('../images/img_hyperconnect_logo.png') no-repeat center;
 	background-size: cover;
+}
+
+/* 반응형 버전 */
+@media all and (max-width:1200px){
+	.banner {
+		position: relative;
+		display: block;
+		height: 80px;
+		background-color: #f3feff;
+		padding: 18px 0;
+	}
+
+	.banner-list li a {
+		position: relative;		
+		display: block;
+		width: 120px;
+		height: 45px;
+	}
+
+	.banner-list{
+		animation: bannerMove linear infinite;
+		animation-duration: 8s;
+	}
+	
+}
+
+@keyframes bannerMove {
+	from { right: 0; }
+  to   { right: 600px; }
 }
 
 
@@ -815,9 +958,6 @@ body {
 	padding: 12px 24px;
 	margin-top: 16px;
 }
-.platform-desc-list-bg{
-	background-color: #fafbff
-}
 
 
 
@@ -899,6 +1039,7 @@ body {
 	/* height: 298px; */
 	/* background-color: #fafbff; */
 	background-color: hsla(0, 0%, 100%, .6);
+
 	border: 0;
 	border-radius: 12px;
 	padding: 12px 24px;
@@ -909,6 +1050,8 @@ body {
 .platform-desc-list-bottom:hover{
 	background-color: #fafbff;
 }
+
+
 .platform-desc-list-bottom>p {
 	position: relative;
 	display: block;
@@ -1021,8 +1164,6 @@ body {
 }
 
 
-
-
 .platform-desc .platform-middle-img-open {
 	display: inline-block;
 	width: 660px;
@@ -1045,6 +1186,8 @@ body {
 .platform-desc-list-main-bottom-open {
 	position: relative;
 	display: block;
+	background-color: #fafbff;
+
 	font-size: 20px;
 	text-align: left;
 	color: #3e3e3e;
@@ -1099,6 +1242,9 @@ body {
 	transform: rotate(360deg);
 }
 
+.platform-desc-list-bg{
+	background-color: #fafbff
+}
 
 
 

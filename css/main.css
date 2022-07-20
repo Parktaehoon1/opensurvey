@@ -1895,7 +1895,6 @@ body {
 .require-title {
 	position: relative;
 	display: block;
-	float: left;
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 48px;
@@ -1904,9 +1903,10 @@ body {
 }
 
 .require-btn {
-	position: relative;
+	position: absolute;
+	right: 0;
+	top: 0;
 	display: block;
-	float: right;
 	background-color: #fff;
 	border-radius: 8px;
 	padding: 16px 25px;
@@ -1971,10 +1971,10 @@ body {
 	.require-btn {
 		position: relative;
 		display: inline-block;
-		min-width: 160px;
+		width: 100px;
 		background-color: #fff;
 		border-radius: 8px;
-		padding: 8px 10px;
+		padding: 2px 2px;
 		font-weight: 700;
 		font-size: 16px;
 		text-align: center;

@@ -1952,8 +1952,8 @@ body {
 		position: relative;
 		display: block;
 		width: 100%;
-		margin-bottom: 32px;
 		text-align: center;
+		margin-bottom: 0;
 	}
 	
 	.require-title {
@@ -1966,6 +1966,7 @@ body {
 		color: #fff;
 		text-align: center;
 		float: none;
+		margin-bottom: 20px;
 	}
 	
 	.require-btn {
@@ -1980,7 +1981,7 @@ body {
 		text-align: center;
 		letter-spacing: -.4px;
 		color: #1c6eff;
-		margin: 0 auto;
+		margin-top: 25px;
 		float: none;
 	}
 	
@@ -2146,4 +2147,161 @@ body {
 .footer-info {
 	padding-left: 40px;
 	font-weight: 700;
+}
+
+/* 반응형 */
+@media all and (max-width:1200px){
+	.footer {
+		position: relative;
+		display: block;
+		padding: 31px 24px 60px;
+
+		background-color: #343f55;
+	}
+	
+	
+	.footer-top {
+		position: relative;
+		display: block;
+	}
+	
+	.footer-logo {
+		position: relative;
+		display: block;
+		width: 123px;
+		height: 24px;
+		margin-top: 10px;
+		margin-right: 60px;
+		background: url('../images/logo_white.svg') no-repeat center;
+		background-size: contain;
+	
+		float: left;
+		z-index: 9;
+	}
+	
+	.footer-list {
+		position: relative;
+		display: block;
+		float: left;
+		line-height: 40px;
+		width: 100%;
+		margin-top: 22px;
+	}
+	
+	.footer-depth1 {
+		position: relative;
+		display: block;
+	}
+	
+	.footer-depth1 li {
+		position: relative;
+		display: block;
+		float: left;
+		padding: 0 10px;
+		cursor: pointer;
+	}
+	
+	.footer-depth1 li a {
+		position: relative;
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		color: #bfcae1;
+		z-index: 9;
+	}
+	
+	.footer-logo-list {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+	}
+	
+	.footer-fb {
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: url('../images/naver_icon.png') no-repeat center;
+		background-size: cover;
+	
+		float: right;
+		margin-left: 10px;
+	}
+	
+	.footer-nv {
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: url('../images/facebook_icon.png') no-repeat center;
+		background-size: cover;
+	
+		float: right;
+	}
+	
+	.footer-bottom {
+		position: relative;
+		display: block;
+		margin-top: 85px;
+	}
+	
+	.footer-bottom-left {
+		position: relative;
+		display: block;
+		float: left;
+	}
+	
+	.footer-bottom-left p {
+		color: #9fabc5;
+		font-size: 14px;
+	}
+	
+	
+	.copy {
+		position: relative;
+		display: block;
+	}
+	
+	.address {
+		position: relative;
+		display: block;
+		margin-top: 15px;
+	}
+	
+	.footer-bottom-right {
+		position: relative;
+		display: block;
+	}
+	
+	.footer-depth2 {
+		position: absolute;
+		left: 10px;
+		top: -100px;
+		display: block;
+		float: right;
+		padding-top: 10px;
+	}
+	
+	.footer-depth2 li {
+		position: relative;
+		display: block;
+		float: left;
+		padding-top: 0;
+	}
+	
+	.footer-depth2 li a {
+		position: relative;
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		color: #bfcae1;
+		z-index: 9;
+	}
+	
+	.footer-info {
+		padding-left: 40px;
+		font-weight: 700;
+	}
+	
 }

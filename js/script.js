@@ -130,7 +130,9 @@ window.onload = function () {
 	$.each(mb_list, function(index){
 		$(this).click(function(){
 			mb_submenu.stop().slideUp();
-			mb_submenu.eq(index).stop().slideToggle();
+
+			$(this).find('.mb-submenu').stop().slideToggle();
+			// mb_submenu.eq(index).stop().slideToggle();
 		});
 
 	})

@@ -1,7 +1,7 @@
 window.onload = function () {
 	// 안내창
   // 추가기능 : 스크롤바 없애기
-//   $('html').css('overflow', 'hidden');
+  // $('html').css('overflow', 'hidden');
 
   let modalWrap = $('.modal-wrap');
   let modalClose = $('.modal-close');
@@ -22,7 +22,7 @@ window.onload = function () {
   modalWrap.click(function(){
     modalWrap.stop().fadeOut(500)
     // 추가기능 : 스크롤바 살리기
-    $('html').css('overflow', 'auto');
+    // $('html').css('overflow', 'auto');
   });
   
 
@@ -68,16 +68,17 @@ window.onload = function () {
 
 
 	new Swiper('.sw-slide', {
+		loop: true,
 		slidesPerView: 4,
 		slidesPerGroup: 4,
 		spaceBetween : 15,
 		loopFillGroupWithBlank : true,
 		allowTouchMove:false,
-		loop: true,
 		navigation: {
       prevEl: '.sw-control-prev',
       nextEl: '.sw-control-next'
     },
+
 	})
 
 
@@ -109,12 +110,15 @@ window.onload = function () {
 	// 모바일 메뉴창
 	let mb_list = $('.mb-gnb > li');
 	let mb_submenu = $('.mb-submenu');
+	let mb_bt_img = $('.mb-gnb > li > img')
+
 
 	$.each(mb_list, function(index){
 		$(this).click(function(){
 			mb_submenu.stop().slideUp();
-
 			$(this).find('.mb-submenu').stop().slideToggle();
+
+			$(this).find(mb_bt_img).toggleClass('mb-bt-img-open')
 			// mb_submenu.eq(index).stop().slideToggle();
 		});
 

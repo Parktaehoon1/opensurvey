@@ -1758,7 +1758,8 @@ body {
 	position: relative;
 	display: block;
 	overflow: hidden;
-	width: 1224px;
+	/* width: 1224px; */
+	width: 63%;
 	margin: 0 auto;
 }
 
@@ -1823,7 +1824,7 @@ body {
 .slide-desc {
 	margin-top: 20px;
 	font-size: 16px;
-	line-height: 26px;
+	line-height: 1.2;
 	letter-spacing: -.6px;
 	color: #3e3e3e;
 }

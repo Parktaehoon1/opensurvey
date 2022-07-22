@@ -69,8 +69,8 @@ window.onload = function () {
 
 	new Swiper('.sw-slide', {
 		loop: true,
-		slidesPerView: 4,
-		slidesPerGroup: 4,
+		slidesPerView: 2,
+		slidesPerGroup: 2,
 		spaceBetween : 15,
 		loopFillGroupWithBlank : true,
 		allowTouchMove:false,
@@ -78,7 +78,29 @@ window.onload = function () {
       prevEl: '.sw-control-prev',
       nextEl: '.sw-control-next'
     },
+		breakpoints:{
+			1500: {
+        slidesPerView: 4,
+				slidesPerGroup: 4,
+			},
+			1200: {
+        slidesPerView: 3,
+				slidesPerGroup: 3,
+			},   
+			1120: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+			},
+			600: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+			},
+			375: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+			},
 
+		}
 	})
 
 

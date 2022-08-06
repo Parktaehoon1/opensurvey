@@ -3,68 +3,78 @@ window.onload = function () {
   // 추가기능 : 스크롤바 없애기
   // $('html').css('overflow', 'hidden');
 
-  let modalWrap = $('.modal-wrap');
-  let modalClose = $('.modal-close');
+  // let modalWrap = $('.modal-wrap');
+  // let modalClose = $('.modal-close');
   
 
-  modalClose.click(function(){
-    modalWrap.stop().fadeOut(500)
-    // 추가기능 : 스크롤바 살리기
-    // $('html').css('overflow', 'auto');
-  });
-  let modalMain = $('.modal-main')
-  //내용 배경 클릭
-  modalMain.click(function(event){
-    // 클릭 정보 전달 막기
-    event.stopPropagation();
-  });
-  //전체 배경 클릭
-  modalWrap.click(function(){
-    modalWrap.stop().fadeOut(500)
-    // 추가기능 : 스크롤바 살리기
-    // $('html').css('overflow', 'auto');
-  });
+  // modalClose.click(function(){
+  //   modalWrap.stop().fadeOut(500)
+  //   // 추가기능 : 스크롤바 살리기
+  //   // $('html').css('overflow', 'auto');
+  // });
+  // let modalMain = $('.modal-main')
+  // //내용 배경 클릭
+  // modalMain.click(function(event){
+  //   // 클릭 정보 전달 막기
+  //   event.stopPropagation();
+  // });
+  // //전체 배경 클릭
+  // modalWrap.click(function(){
+  //   modalWrap.stop().fadeOut(500);
+  //   // 추가기능 : 스크롤바 살리기
+  //   // $('html').css('overflow', 'auto');
+  // });
   
 
 
+	// platform 영역
+	// platform top
+	let platform_desc_list_main_top = $('.platform-desc-list-main-top');
+	let platform_btn_top = $('.platform-btn-top');
+	let platform_top_img = $('.platform-top-img');
 
-	let platform_desc_list_main_top = $('.platform-desc-list-main-top')
-	let platform_btn_top = $('.platform-btn-top')
-
-	let platform_top_img = $('.platform-top-img')
-
-	let platform_btn_middle = $('.platform-btn-middle')
-	let platform_middle_img_open = $('.platform-middle-img-open')
-	let platform_desc_list_main_middle = $('.platform-desc-list-main-middle')
+	// platform middle
+	let platform_btn_middle = $('.platform-btn-middle');
+	let platform_middle_img_open = $('.platform-middle-img-open');
+	let platform_desc_list_main_middle = $('.platform-desc-list-main-middle');
 	let platform_desc_list_middle = $('.platform-desc-list-middle');
 
+	// platform bottom
+	let platform_btn_bottom = $('.platform-btn-bottom');
+	let platform_desc_list_main_bottom = $('.platform-desc-list-main-bottom');
+	let platform_desc_list_bottom = $('.platform-desc-list-bottom');
+	
+	// platform button 메뉴 리스트 처럼 생각하고 구현해보기
+	let platformBtn = $('.platform button');
+	let temp = platformBtn.find('platform-contents');
+	// console.log(platformBtn) 안에 버튼 영역 3개 잡힘
+	$.each(platformBtn, function(index, item){
+		// 플랫폼안에 버튼 다 찾기
+		let platformContents = $('.platform-contents');
+		let platformButton = $('.platform-button');
+		let moreButton = $('.more-button')
+		let titleColor = $('.title-color')
+		// 플랫폼 버튼 안에 내용 찾기
+		// console.log(temp) 원하는 거 나옴
+		// console.log(index , item); 원하는 거 나옴
+		platformBtn.eq(index).click(function(){
+			// temp.hide()
+			// temp.eq(index).show()
+			console.log('몇번째 버튼', index)
+			platformContents.hide()
+			platformContents.eq(index).show()
 
-	let platform_btn_bottom = $('.platform-btn-bottom')
-	let platform_desc_list_main_bottom = $('.platform-desc-list-main-bottom')
-	let platform_desc_list_bottom = $('.platform-desc-list-bottom')
-	
-	
-	// 탑 버튼 클릭
-	platform_btn_top.click(function () {
-		platform_desc_list_main_top.toggleClass('platform-desc-list-main-top-open')
-		platform_btn_top.toggleClass('platform-btn-rotate90');
+			platformButton.css('background', 'hsla(0, 0%, 100%, .6)')
+			platformButton.eq(index).css('background', '#fafbff')
+
+			moreButton.css('transform', 'rotate(90deg)')
+			moreButton.eq(index).css('transform', 'rotate(360deg)')
+			
+			titleColor.css('color', '#7b87a0')
+			titleColor.eq(index).css('color', '#343f55')
+		})
 	})
 
-	// 미들버튼 클릭
-	platform_btn_middle.click(function () {
-		platform_desc_list_main_middle.toggleClass('platform-desc-list-main-middle-open')
-		platform_top_img.toggleClass('platform-middle-img-open');
-		platform_btn_middle.toggleClass('platform-btn-rotate180');
-		platform_desc_list_middle.toggleClass('platform-desc-list-bg')
-	});
-
-	// 하단버튼 클릭
-	platform_btn_bottom.click(function () {
-		platform_desc_list_main_bottom.toggleClass('platform-desc-list-main-bottom-open')
-		platform_top_img.toggleClass('platform-bottom-img-open')
-		platform_btn_bottom.toggleClass('platform-btn-rotate180');
-		platform_desc_list_bottom.toggleClass('platform-desc-list-bg')
-	});
 
 
 	new Swiper('.sw-slide', {

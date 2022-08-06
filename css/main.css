@@ -61,7 +61,7 @@ body {
 }
 
 /* 안내창 */
-.modal-wrap {
+/* .modal-wrap {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -142,7 +142,7 @@ body {
 
 .modal-close:hover {
 	transform: rotate(180deg);
-}
+} */
 
 
 

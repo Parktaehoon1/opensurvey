@@ -28,25 +28,8 @@ window.onload = function () {
 
 
 	// platform 영역
-	// platform top
-	let platform_desc_list_main_top = $('.platform-desc-list-main-top');
-	let platform_btn_top = $('.platform-btn-top');
-	let platform_top_img = $('.platform-top-img');
 
-	// platform middle
-	let platform_btn_middle = $('.platform-btn-middle');
-	let platform_middle_img_open = $('.platform-middle-img-open');
-	let platform_desc_list_main_middle = $('.platform-desc-list-main-middle');
-	let platform_desc_list_middle = $('.platform-desc-list-middle');
-
-	// platform bottom
-	let platform_btn_bottom = $('.platform-btn-bottom');
-	let platform_desc_list_main_bottom = $('.platform-desc-list-main-bottom');
-	let platform_desc_list_bottom = $('.platform-desc-list-bottom');
-	
-	// platform button 메뉴 리스트 처럼 생각하고 구현해보기
 	let platformBtn = $('.platform button');
-	let temp = platformBtn.find('platform-contents');
 	// console.log(platformBtn) 안에 버튼 영역 3개 잡힘
 	$.each(platformBtn, function(index, item){
 		// 플랫폼안에 버튼 다 찾기
@@ -72,6 +55,27 @@ window.onload = function () {
 			
 			titleColor.css('color', '#7b87a0')
 			titleColor.eq(index).css('color', '#343f55')
+		})
+	})
+
+
+	let topImg = $('.platform-img'); 
+
+	$.each(platformBtn, function(index, item){
+		platformBtn.eq(0).click(function(){
+				topImg.addClass('platform-img');
+				topImg.removeClass('platform-bottom-img-open');
+				topImg.removeClass('platform-middle-img-open');
+		})
+		platformBtn.eq(1).click(function(){
+				topImg.removeClass('platform-img');
+				topImg.removeClass('platform-bottom-img-open');
+				topImg.addClass('platform-middle-img-open')
+		})
+		platformBtn.eq(2).click(function(){
+			topImg.removeClass('platform-img');
+			topImg.removeClass('platform-middle-img-open');
+			topImg.addClass('platform-bottom-img-open');
 		})
 	})
 

@@ -984,11 +984,11 @@ body {
 .platform-desc {
 	position: relative;
 	display: block;
-		text-align: left;
+	text-align: left;
 	float: left;
 }
 
-.platform-desc .platform-top-img {
+.platform-desc .platform-img {
 	display: inline-block;
 	width: 660px;
 	height: 520px;
@@ -1271,32 +1271,12 @@ body {
 	line-height: 3.2rem;
 }
 
-.platform-desc .platform-top-img-close {
-	display: none;
-	width: 660px;
-	height: 520px;
-	background: url('../images/img_main_survey.png') no-repeat center;
-	background-size: cover;
-}
-
-.platform-btn-top-close {
-	position: absolute;
-	right: 30px;
-	top: 20px;
-	display: block;
-	width: 24px;
-	height: 24px;
-	background: url('../images/ic_chevron_up.png') no-repeat center;
-	background-size: cover;
-	transform: rotate(90deg);
-}
-
 /* 클릭시 오픈 */
 
 
 
 
-.platform-desc-list-main-middle-open {
+/* .platform-desc-list-main-middle-open {
 	position: relative;
 	display: block;
 	background-color: #fafbff;
@@ -1307,7 +1287,7 @@ body {
 	border-top: 2px solid #bcc3d5;
 	padding-top: 24px;
 	line-height: 3.2rem;
-}
+} */
 
 
 .platform-desc .platform-middle-img-open {

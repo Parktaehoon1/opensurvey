@@ -2393,6 +2393,7 @@ body {
 	display: block;
 	color: #9fabc5;
 	font-size: 14px;
+	margin-top: 10px;
 }
 
 .footer-bottom-right {
@@ -2404,7 +2405,7 @@ body {
 	position: relative;
 	display: block;
 	float: right;
-	padding-top: 10px;
+	padding-top: 30px;
 }
 
 .footer-depth2 li {

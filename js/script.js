@@ -85,9 +85,16 @@ window.onload = function () {
 	$(window).resize(function () {
 		let temp = $(window).width();
 		if (temp < 1200) {
-			slide.css('display', 'none');
-			resSlide.css('display', 'block');
+			// slide.css('display', 'none');
+			// resSlide.css('display', 'block');
+			slide.hide();
+			resSlide.show();
 			// mb_wrap.hide();
+		} else{
+			// slide.css('display', 'block');
+			// resSlide.css('display', 'none');
+			slide.show();
+			resSlide.hide();
 		}
 	});
 
@@ -126,8 +133,18 @@ window.onload = function () {
 
 		// }
 	})
+	new Swiper('.res-sw-slide', {
+		loop: true,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween : 20,
+		// loopFillGroupWithBlank : true,
+	})
 
 
+
+
+	
 
 
 	// mb-bt 클릭시 mb-wrap 나오기

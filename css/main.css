@@ -150,6 +150,7 @@ body {
 .wrap {
 	position: relative;
 	display: block;
+	height: 100vh;  
 }
 
 /* 헤더 */

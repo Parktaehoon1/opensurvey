@@ -1,913 +1,1034 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="https://public.opensurvey.co.kr/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-to   uch-icon-precomposed"
+      href="images/apple-touch-icon.png"
+    />
 
-<head>
-   <meta charset="UTF-8">
-   <link rel="shortcut icon" href="images/favicon.ico" />
-   <link rel="apple-to   uch-icon-precomposed" href="images/apple-touch-icon.png">
+    <meta property="og:url" content="https://www.opensurvey.co.kr/" />
+    <meta property="og:title" content="오픈서베이" />
+    <meta
+      property="og:description"
+      content="소비자 데이터로 시장의 기회를 더 빠르게 발견하세요"
+    />
+    <meta property="og:site_name" content="오픈서베이" />
+    <meta property="og:type" content="website" />
+    <meta name="path_role" content="MAIN" />
+    <meta
+      name="author"
+      content="소비자 데이터로 시장의 기회를 더 빠르게 발견하세요"
+    />
+    <meta
+      name="description"
+      content="소비자 데이터로 시장의 기회를 더 빠르게 발견하세요"
+    />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>오픈서베이</title>
+    <script src="js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/429f5509fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 스와이프 -->
 
-   <meta property="og:url" content="https://www.opensurvey.co.kr/" />
-   <meta property="og:title" content="오픈서베이" />
-   <meta property="og:description" content="소비자 데이터로 시장의 기회를 더 빠르게 발견하세요" />
-   <meta property="og:site_name" content="오픈서베이" />
-   <meta property="og:type" content="website" />
-   <meta name="path_role" content="MAIN" />
-   <meta name="author" content="소비자 데이터로 시장의 기회를 더 빠르게 발견하세요" />
-   <meta name="description" content="소비자 데이터로 시장의 기회를 더 빠르게 발견하세요" />
-   <meta name="keywords" content="">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-   <title>오픈서베이</title>
-   <script src="js/prefixfree.min.js"></script>
-   <!--[if lt IE 9]> 
-         <script src="js/html5shiv.js"></script>
-     <![endif]-->
-   <!-- 폰트어썸 -->
-   <script src="https://kit.fontawesome.com/429f5509fa.js" crossorigin="anonymous"></script>
-   <!-- 스와이프 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- 사용자 지정 -->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-   <script src="js/respond.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-   <link rel="stylesheet" href="css/reset.css"> <!-- 사용자 지정 -->
-   <script src="js/script.js"></script>
-   <link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-   <!-- 안내창 -->
-   <div class="modal-wrap">
+  <body>
+    <!-- 모달창 -->
+    <div class="modal-wrap">
       <div class="modal-main">
-         <img src="images/free-icon-warning-752755.png" alt="경고아이콘" class="modal-warning">
-         <h1>opensurvey 클론코딩</h1>
-         <p class="modal-desc">
-            이 사이트는 <span class="checkfont">스터디용</span>으로 제작되었으며 리소스는 <span class="checkfont">원저작자</span>에게 있습니다.
-            <br>
+        <div class="modal-up">
+          <span class="btn1"></span>
+          <span class="btn2"></span>
+          <span class="btn3"></span>
+        </div>
+        <div class="modal-bottom">
+          <h1>Opensurvey 클론코딩</h1>
+          <p class="modal-desc">
+            이 사이트는 <span class="checkfont">스터디용</span>으로 제작되었으며
+            리소스는 <span class="checkfont">원저작자</span>에게 있습니다.
+            <br />
             해당 사이트 관련 문제 사항이 있으시면 연락해주시면 삭제하겠습니다.
-         </p>
-         <h2>수정사항</h2>
-         <p class="modal-list">
-            1. 반응형으로 제작 하였습니다.<br>
-            2. 파비콘 제작 후 적용 하였습니다.<br>
-            3. Swiper 부분 반응형으로 추가 수정 하였습니다.<br>
-         </p>
-         <p class="modal-chrome">본 사이트는 <span class="checkfont">Chrome</span> 에 최적화되어 있습니다.</p>
-         <button class="modal-close">
+          </p>
+
+          <p class="modal-study">
+            1. 메타 태그를 통한 검색엔진 최적화 진행하였습니다.
+          </p>
+
+          <p class="modal-chrome">
+            본 사이트는 <span class="checkfont">Chrome</span> 에 최적화되어
+            있습니다.😊
+          </p>
+          <button class="modal-close">
             <!-- <i class="fas fa-times"></i> -->
             CLOSE
-         </button>
+          </button>
+        </div>
       </div>
-   </div>
+    </div>
 
-
-
-
-
-   <!-- 전체영역 -->
-   <div class="wrap">
+    <!-- 전체영역 -->
+    <div class="wrap">
       <!-- 모바일 버튼 -->
       <a href="#" class="mb-bt"></a>
 
-
       <!-- 모바일 메뉴 -->
       <div class="mb-wrap">
-         <div class="mb-nav">
-            <ul class="mb-gnb">
-               <li class="clearfix">
-                  <a href="#" class="mb-mainmenu">서비스</a>
-                  <img src="images/ic_chevron_down.png" alt="모바일버튼">
-                  <ul class="mb-submenu">
-                     <li><a href="#">마케팅 리서치</a></li>
-                     <li><a href="#">기업 고객 자문단</a></li>
-                     <li><a href="#">UX 리서치</a></li>
-                     <li><a href="#">해외 리서치</a></li>
-                  </ul>
-               </li>
-               <li class="clearfix">
-                  <a href="#" class="mb-mainmenu">프로덕트</a>
-                  <img src="images/ic_chevron_down.png" alt="모바일버튼">
-                  <ul class="mb-submenu">
-                     <li><a href="#">서베이 플랫폼</a></li>
-                     <li><a href="#">데이터 수집 앱</a></li>
-                     <li><a href="#">데이터 분석 플랫폼</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#" class="mb-mainmenu">데이터</a>
-               </li>
-               <li class="clearfix">
-                  <a href="#" class="mb-mainmenu">블로그</a>
-                  <img src="images/ic_chevron_down.png" alt="모바일버튼">
-                  <ul class="mb-submenu">
-                     <li><a href="#">뉴스</a></li>
-                     <li><a href="#">트렌드 리포트</a></li>
-                     <li><a href="#">아티클</a></li>
-                     <li><a href="#">리서치 팁</a></li>
-                     <li><a href="#">오픈서베이 팀</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#" class="mb-mainmenu">고객센터
-                     <img class="gnb-img" src="images/ic_sorting_up.png" alt="모바일대각선버튼">
-                  </a>
-               </li>
-            </ul>
-            <div class="mb-nav-btn clearfix">
-               <button class="mb-nav-btn-left">지금 문의하기</button>
-               <button class="mb-nav-btn-right">로그인</button>
-            </div>
-         </div>
+        <div class="mb-nav">
+          <ul class="mb-gnb">
+            <li class="clearfix">
+              <a href="#" class="mb-mainmenu">서비스</a>
+              <img src="images/ic_chevron_down.png" alt="모바일버튼" />
+              <ul class="mb-submenu">
+                <li><a href="#">마케팅 리서치</a></li>
+                <li><a href="#">기업 고객 자문단</a></li>
+                <li><a href="#">UX 리서치</a></li>
+                <li><a href="#">해외 리서치</a></li>
+              </ul>
+            </li>
+            <li class="clearfix">
+              <a href="#" class="mb-mainmenu">프로덕트</a>
+              <img src="images/ic_chevron_down.png" alt="모바일버튼" />
+              <ul class="mb-submenu">
+                <li><a href="#">서베이 플랫폼</a></li>
+                <li><a href="#">데이터 수집 앱</a></li>
+                <li><a href="#">데이터 분석 플랫폼</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="mb-mainmenu">데이터</a>
+            </li>
+            <li class="clearfix">
+              <a href="#" class="mb-mainmenu">블로그</a>
+              <img src="images/ic_chevron_down.png" alt="모바일버튼" />
+              <ul class="mb-submenu">
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">트렌드 리포트</a></li>
+                <li><a href="#">아티클</a></li>
+                <li><a href="#">리서치 팁</a></li>
+                <li><a href="#">오픈서베이 팀</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="mb-mainmenu"
+                >고객센터
+                <img
+                  class="gnb-img"
+                  src="images/ic_sorting_up.png"
+                  alt="모바일대각선버튼"
+                />
+              </a>
+            </li>
+          </ul>
+          <div class="mb-nav-btn clearfix">
+            <button class="mb-nav-btn-left">지금 문의하기</button>
+            <button class="mb-nav-btn-right">로그인</button>
+          </div>
+        </div>
       </div>
       <!-- 헤더 -->
       <header class="header">
-         <div class="logo-wrap">
-            <a href="#" class="logo">logo</a>
-         </div>
+        <div class="logo-wrap">
+          <a href="#" class="logo">logo</a>
+        </div>
 
-         <div class="nav">
-            <ul class="gnb">
-               <li>
-                  <a href="#" class="mainmenu">서비스</a>
-                  <ul class="submenu">
-                     <li><a href="#">마케팅 리서치</a></li>
-                     <li><a href="#">기업 고객 자문단</a></li>
-                     <li><a href="#">UX 리서치</a></li>
-                     <li><a href="#">해외 리서치</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#" class="mainmenu">프로덕트</a>
-                  <ul class="submenu">
-                     <li><a href="#">서베이 플랫폼</a></li>
-                     <li><a href="#">데이터 수집 앱</a></li>
-                     <li><a href="#">데이터 분석 플랫폼</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#" class="mainmenu">데이터</a>
-               </li>
-               <li>
-                  <a href="#" class="mainmenu">블로그</a>
-                  <ul class="submenu">
-                     <li><a href="#">뉴스</a></li>
-                     <li><a href="#">트렌드 리포트</a></li>
-                     <li><a href="#">아티클</a></li>
-                     <li><a href="#">리서치 팁</a></li>
-                     <li><a href="#">오픈서베이 팀</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#" class="mainmenu">고객센터
-                     <img class="gnb-img" src="images/ic_sorting_up.png" alt="모바일버튼">
-                  </a>
-               </li>
-            </ul>
-         </div>
+        <div class="nav">
+          <ul class="gnb">
+            <li>
+              <a href="#" class="mainmenu">서비스</a>
+              <ul class="submenu">
+                <li><a href="#">마케팅 리서치</a></li>
+                <li><a href="#">기업 고객 자문단</a></li>
+                <li><a href="#">UX 리서치</a></li>
+                <li><a href="#">해외 리서치</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="mainmenu">프로덕트</a>
+              <ul class="submenu">
+                <li><a href="#">서베이 플랫폼</a></li>
+                <li><a href="#">데이터 수집 앱</a></li>
+                <li><a href="#">데이터 분석 플랫폼</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="mainmenu">데이터</a>
+            </li>
+            <li>
+              <a href="#" class="mainmenu">블로그</a>
+              <ul class="submenu">
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">트렌드 리포트</a></li>
+                <li><a href="#">아티클</a></li>
+                <li><a href="#">리서치 팁</a></li>
+                <li><a href="#">오픈서베이 팀</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="mainmenu"
+                >고객센터
+                <img
+                  class="gnb-img"
+                  src="images/ic_sorting_up.png"
+                  alt="모바일버튼"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
 
-         <div class="header-btn-list clearfix">
-            <button class="header-btn-left">지금 문의하기</button>
-            <button class="header-btn-right">로그인</button>
-         </div>
-
+        <div class="header-btn-list clearfix">
+          <button class="header-btn-left">지금 문의하기</button>
+          <button class="header-btn-right">로그인</button>
+        </div>
       </header>
       <!-- 비주얼 -->
       <section class="visual">
-         <div class="inner">
-
-            <div class="visual-left">
-               <div class="visual-div">
-                  <h1>소비자 데이터로 시장의 기회를 더 빠르게 발견하세요</h1>
-                  <div class="visual-btn-wrap">
-                     <a href="#" class="visual-left-btn">지금 문의하기</a>
-                     <a href="#" class="visual-right-btn">소개서 받기</a>
-                  </div>
-                  <div class="visual-link-box">
-                     <a href="#" class="visual-link">트렌드 리포트 둘러보기</a>
-                     <img src="images/visual_title_arrow.png" alt="" class="visual-link-img">
-                  </div>
-
-               </div>
+        <div class="inner">
+          <div class="visual-left">
+            <div class="visual-div">
+              <h1>소비자 데이터로 시장의 기회를 더 빠르게 발견하세요</h1>
+              <div class="visual-btn-wrap">
+                <a href="#" class="visual-left-btn">지금 문의하기</a>
+                <a href="#" class="visual-right-btn">소개서 받기</a>
+              </div>
+              <div class="visual-link-box">
+                <a href="#" class="visual-link">트렌드 리포트 둘러보기</a>
+                <img
+                  src="images/visual_title_arrow.png"
+                  alt=""
+                  class="visual-link-img"
+                />
+              </div>
             </div>
+          </div>
 
-            <img src="images/img_main.png" alt="" class="visual-right-img">
-         </div>
+          <img src="images/img_main.png" alt="" class="visual-right-img" />
+        </div>
       </section>
       <!-- 배너 -->
       <section class="banner">
-         <div class="inner">
-            <ul class="banner-list">
-               <li><a href="#" class="banner-img1"></a></li>
-               <li><a href="#" class="banner-img2"></a></li>
-               <li><a href="#" class="banner-img3"></a></li>
-               <li><a href="#" class="banner-img4"></a></li>
-               <li><a href="#" class="banner-img5"></a></li>
-               <li><a href="#" class="banner-img6"></a></li>
-               <li><a href="#" class="banner-img7"></a></li>
-               <li><a href="#" class="banner-img8"></a></li>
-            </ul>
-         </div>
+        <div class="inner">
+          <ul class="banner-list">
+            <li><a href="#" class="banner-img1"></a></li>
+            <li><a href="#" class="banner-img2"></a></li>
+            <li><a href="#" class="banner-img3"></a></li>
+            <li><a href="#" class="banner-img4"></a></li>
+            <li><a href="#" class="banner-img5"></a></li>
+            <li><a href="#" class="banner-img6"></a></li>
+            <li><a href="#" class="banner-img7"></a></li>
+            <li><a href="#" class="banner-img8"></a></li>
+          </ul>
+        </div>
       </section>
       <!-- 카테고리 -->
       <section class="category">
-         <div class="inner">
-            <h2 class="category-title">
-               복잡해진 시장과 소비자를 이해하기 위해서는 그에 맞는 새로운 방식이 필요합니다
-            </h2>
-         </div>
+        <div class="inner">
+          <h2 class="category-title">
+            복잡해진 시장과 소비자를 이해하기 위해서는 그에 맞는 새로운 방식이
+            필요합니다
+          </h2>
+        </div>
 
-         <div class="inner">
-
-            <div class="category-box">
-               <div class="category-img">
-                  <img src="images/img_main_marketing.png" alt="카테고리이미지">
-               </div>
-               <div class="category-txt">
-                  <h2 class="category-txt-title">마케팅 리서치</h2>
-                  <span class="category-txt-desc">시장, 마케팅, 브랜딩, 제품 등 비즈니스 성장을 위한</span>
-                  <span class="category-txt-desc">소비자 데이터를 빠르고 정확하게 얻을 수 있습니다.</span>
-                  <a href="#" class="category-txt-btn">더 알아보기
-                     <img src="images/ic_right_arrow.png" alt="버튼이미지">
-                  </a>
-               </div>
+        <div class="inner">
+          <div class="category-box">
+            <div class="category-img">
+              <img src="images/img_main_marketing.png" alt="카테고리이미지" />
             </div>
-
-            <div class="category-box">
-               <div class="category-txt">
-                  <h2 class="category-txt-title">기업 고객 자문단</h2>
-                  <span class="category-txt-desc">온라인과 오프라인 조사, 정량과 정성조사의</span>
-                  <span class="category-txt-desc">경계를 허물며 숫자보다 더 생생한 VoC를 수집합니다.</span>
-                  <a href="#" class="category-txt-btn">더 알아보기
-                     <img src="images/ic_right_arrow.png" alt="버튼이미지">
-                  </a>
-               </div>
-               <div class="category-img">
-                  <img src="images/img_main_panel.png" alt="카테고리이미지">
-               </div>
+            <div class="category-txt">
+              <h2 class="category-txt-title">마케팅 리서치</h2>
+              <span class="category-txt-desc"
+                >시장, 마케팅, 브랜딩, 제품 등 비즈니스 성장을 위한</span
+              >
+              <span class="category-txt-desc"
+                >소비자 데이터를 빠르고 정확하게 얻을 수 있습니다.</span
+              >
+              <a href="#" class="category-txt-btn"
+                >더 알아보기
+                <img src="images/ic_right_arrow.png" alt="버튼이미지" />
+              </a>
             </div>
+          </div>
 
-            <div class="category-box">
-               <div class="category-img">
-                  <img src="images/img_main_ux.png" alt="카테고리이미지">
-               </div>
-               <div class="category-txt">
-                  <h2 class="category-txt-title">UX 리서치</h2>
-                  <span class="category-txt-desc">더 나은 제품과 서비스를 만들기 위해</span>
-                  <span class="category-txt-desc">사용자의 의견을 듣고 관찰하고 분석합니다.</span>
-                  <a href="#" class="category-txt-btn">더 알아보기
-                     <img src="images/ic_right_arrow.png" alt="버튼이미지">
-                  </a>
-               </div>
+          <div class="category-box">
+            <div class="category-txt">
+              <h2 class="category-txt-title">기업 고객 자문단</h2>
+              <span class="category-txt-desc"
+                >온라인과 오프라인 조사, 정량과 정성조사의</span
+              >
+              <span class="category-txt-desc"
+                >경계를 허물며 숫자보다 더 생생한 VoC를 수집합니다.</span
+              >
+              <a href="#" class="category-txt-btn"
+                >더 알아보기
+                <img src="images/ic_right_arrow.png" alt="버튼이미지" />
+              </a>
             </div>
-
-            <div class="category-box">
-               <div class="category-txt">
-                  <h2 class="category-txt-title">해외 리서치</h2>
-                  <span class="category-txt-desc">해외에 나가지 않고도 88여 개국 글로벌 소비자와</span>
-                  <span class="category-txt-desc">시장을 정확하게 파악할 수 있습니다.</span>
-                  <a href="#" class="category-txt-btn">더 알아보기
-                     <img src="images/ic_right_arrow.png" alt="버튼이미지">
-                  </a>
-               </div>
-               <div class="category-img">
-                  <img src="images/img_main_abroad.png" alt="카테고리이미지">
-               </div>
+            <div class="category-img">
+              <img src="images/img_main_panel.png" alt="카테고리이미지" />
             </div>
+          </div>
 
+          <div class="category-box">
+            <div class="category-img">
+              <img src="images/img_main_ux.png" alt="카테고리이미지" />
+            </div>
+            <div class="category-txt">
+              <h2 class="category-txt-title">UX 리서치</h2>
+              <span class="category-txt-desc"
+                >더 나은 제품과 서비스를 만들기 위해</span
+              >
+              <span class="category-txt-desc"
+                >사용자의 의견을 듣고 관찰하고 분석합니다.</span
+              >
+              <a href="#" class="category-txt-btn"
+                >더 알아보기
+                <img src="images/ic_right_arrow.png" alt="버튼이미지" />
+              </a>
+            </div>
+          </div>
 
-         </div>
+          <div class="category-box">
+            <div class="category-txt">
+              <h2 class="category-txt-title">해외 리서치</h2>
+              <span class="category-txt-desc"
+                >해외에 나가지 않고도 88여 개국 글로벌 소비자와</span
+              >
+              <span class="category-txt-desc"
+                >시장을 정확하게 파악할 수 있습니다.</span
+              >
+              <a href="#" class="category-txt-btn"
+                >더 알아보기
+                <img src="images/ic_right_arrow.png" alt="버튼이미지" />
+              </a>
+            </div>
+            <div class="category-img">
+              <img src="images/img_main_abroad.png" alt="카테고리이미지" />
+            </div>
+          </div>
+        </div>
       </section>
       <!-- 플랫폼 -->
       <section class="platform">
-         <div class="inner clearfix">
-            <div class="platform-title">
-               <h2>기술을 통해 풍부하고 정확한 데이터를 수집하고 더 쉽고 빠르게 분석합니다
-               </h2>
-            </div>
+        <div class="inner clearfix">
+          <div class="platform-title">
+            <h2>
+              기술을 통해 풍부하고 정확한 데이터를 수집하고 더 쉽고 빠르게
+              분석합니다
+            </h2>
+          </div>
 
-            <div class="platform-desc">
-               <a href="#" class="platform-img"></a>
-            </div>
+          <div class="platform-desc">
+            <a href="#" class="platform-img"></a>
+          </div>
 
-            <div class="platform-btn-list">
+          <div class="platform-btn-list">
+            <button class="platform-desc-list-top platform-button">
+              <p class="title-color">서베이 플랫폼</p>
+              <a class="platform-btn-top more-button"></a>
+              <div class="platform-desc-list-main-top platform-contents">
+                <p>
+                  설문 편집부터 응답 수집까지 전 과정을 자동화하여 빠르고 쉽게
+                  데이터를 수집할 수 있습니다. 정교한 타겟팅 시스템으로 원하는
+                  프로필의 응답자에게 설문을 보낼 수 있습니다.
+                </p>
+                <span class="platform-more-btn-top"
+                  >더 알아보기
+                  <a href="#" class="more-btn-top"></a>
+                </span>
+              </div>
+            </button>
 
-               <button class="platform-desc-list-top platform-button">
-                  <p class="title-color">서베이 플랫폼</p>
-                  <a class="platform-btn-top more-button"></a>
-                  <div class="platform-desc-list-main-top platform-contents">
-                     <p>설문 편집부터 응답 수집까지 전 과정을 자동화하여 빠르고 쉽게 데이터를 수집할 수 있습니다. 정교한 타겟팅 시스템으로 원하는 프로필의 응답자에게 설문을 보낼 수
-                        있습니다.</p>
-                     <span class="platform-more-btn-top">더 알아보기
-                        <a href="#" class="more-btn-top"></a>
-                     </span>
-                  </div>
-               </button>
+            <button class="platform-desc-list-middle platform-button">
+              <p class="title-color">데이터 수집 앱</p>
+              <a class="platform-btn-middle more-button"></a>
+              <div class="platform-desc-list-main-middle platform-contents">
+                <p>
+                  모바일 앱을 통해 설문, 다이어리, 사진, 영상, 미션 등 다양한
+                  형태의 데이터를 수집합니다.
+                </p>
+                <span class="platform-more-btn-middle"
+                  >더 알아보기
+                  <a href="#" class="more-btn-middle"></a>
+                </span>
+              </div>
+            </button>
 
-               <button class="platform-desc-list-middle platform-button">
-                  <p class="title-color">데이터 수집 앱</p>
-                  <a class="platform-btn-middle more-button"></a>
-                  <div class="platform-desc-list-main-middle platform-contents">
-                     <p>모바일 앱을 통해 설문, 다이어리, 사진, 영상, 미션 등 다양한 형태의 데이터를 수집합니다.</p>
-                     <span class="platform-more-btn-middle">더 알아보기
-                        <a href="#" class="more-btn-middle"></a>
-                     </span>
-                  </div>
-               </button>
+            <button class="platform-desc-list-bottom platform-button">
+              <p class="title-color">데이터 분석 플랫폼</p>
+              <a class="platform-btn-bottom more-button"></a>
+              <div class="platform-desc-list-main-bottom platform-contents">
+                <p>
+                  누구나 소비자 데이터를 편리하게 분석해 인사이트를 얻을 수
+                  있습니다. 알고리즘이 쓴 자동 보고서가 제공됩니다.
+                </p>
+                <span class="platform-more-btn-bottom"
+                  >더 알아보기
+                  <a href="#" class="more-btn-bottom"></a>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
 
-               <button class="platform-desc-list-bottom platform-button">
-                  <p class="title-color">데이터 분석 플랫폼</p>
-                  <a class="platform-btn-bottom more-button"></a>
-                  <div class="platform-desc-list-main-bottom platform-contents">
-                     <p>누구나 소비자 데이터를 편리하게 분석해 인사이트를 얻을 수 있습니다. 알고리즘이 쓴 자동 보고서가 제공됩니다. </p>
-                     <span class="platform-more-btn-bottom">더 알아보기
-                        <a href="#" class="more-btn-bottom"></a>
-                     </span>
-                  </div>
-               </button>
-            </div>
-         </div>
-
-
-         <!-- 반응형 1200px일때 -->
-         <div class="platform1200">
-            <div>
-               <h2 class="platform1200-title">기술을 통해 풍부하고 정확한 데이터를 수집하고 더 쉽고 빠르게 분석합니다
-               </h2>
+        <!-- 반응형 1200px일때 -->
+        <div class="platform1200">
+          <div>
+            <h2 class="platform1200-title">
+              기술을 통해 풍부하고 정확한 데이터를 수집하고 더 쉽고 빠르게
+              분석합니다
+            </h2>
+          </div>
+          <div class="images-box1200">
+            <img src="images/img_main_survey.png" alt="플랫폼메인이미지" />
+            <p class="images-box1200-title">서베이 플랫폼</p>
+            <div class="images-box1200-desc">
+              <p>
+                설문 편집부터 응답 수집까지 전 과정을 자동화하여 빠르고 쉽게
+                데이터를 수집할 수 있습니다. 정교한 타겟팅 시스템으로 원하는
+                프로필의 응답자에게 설문을 보낼 수 있습니다.
+              </p>
+              <span
+                >더 알아보기
+                <a href="#" class="more-btn"></a>
+              </span>
             </div>
             <div class="images-box1200">
-               <img src="images/img_main_survey.png" alt="플랫폼메인이미지">
-               <p class="images-box1200-title">서베이 플랫폼</p>
-               <div class="images-box1200-desc">
-                  <p>설문 편집부터 응답 수집까지 전 과정을 자동화하여 빠르고 쉽게 데이터를 수집할 수 있습니다. 정교한 타겟팅 시스템으로 원하는 프로필의 응답자에게 설문을 보낼 수
-                     있습니다.</p>
-                  <span>더 알아보기
-                     <a href="#" class="more-btn"></a>
-                  </span>
-               </div>
-               <div class="images-box1200">
-                  <img src="images/img_main_app.png" alt="플랫폼메인이미지">
-                  <p class="images-box1200-title">데이터 수집 앱</p>
-                  <div class="images-box1200-desc">
-                     <p>모바일 앱을 통해 설문, 다이어리, 사진, 영상, 미션 등 다양한 형태의 데이터를 수집합니다.</p>
-                     <span>더 알아보기
-                        <a href="#" class="more-btn"></a>
-                     </span>
-                  </div>
-               </div>
-               <div class="images-box1200">
-                  <img src="images/img_main_platform.png" alt="플랫폼메인이미지">
-                  <p class="images-box1200-title">데이터 분석 플랫폼</p>
-                  <div class="images-box1200-desc">
-                     <p>누구나 소비자 데이터를 편리하게 분석해 인사이트를 얻을 수 있습니다. 알고리즘이 쓴 자동 보고서가 제공됩니다. </p>
-                     <span>더 알아보기
-                        <a href="#" class="more-btn"></a>
-                     </span>
-                  </div>
-               </div>
+              <img src="images/img_main_app.png" alt="플랫폼메인이미지" />
+              <p class="images-box1200-title">데이터 수집 앱</p>
+              <div class="images-box1200-desc">
+                <p>
+                  모바일 앱을 통해 설문, 다이어리, 사진, 영상, 미션 등 다양한
+                  형태의 데이터를 수집합니다.
+                </p>
+                <span
+                  >더 알아보기
+                  <a href="#" class="more-btn"></a>
+                </span>
+              </div>
             </div>
-         </div>
-
-
-
+            <div class="images-box1200">
+              <img src="images/img_main_platform.png" alt="플랫폼메인이미지" />
+              <p class="images-box1200-title">데이터 분석 플랫폼</p>
+              <div class="images-box1200-desc">
+                <p>
+                  누구나 소비자 데이터를 편리하게 분석해 인사이트를 얻을 수
+                  있습니다. 알고리즘이 쓴 자동 보고서가 제공됩니다.
+                </p>
+                <span
+                  >더 알아보기
+                  <a href="#" class="more-btn"></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- 레포트 -->
       <section class="report">
-         <div class="inner">
-            <div class="report-title">
-               <h2>먹고, 사고, 시간을 보내는 소비자에 대한 오픈서베이의 오리지널 데이터를 만나보세요</h2>
-               <a href="#">더 알아보기</a>
-            </div>
+        <div class="inner">
+          <div class="report-title">
+            <h2>
+              먹고, 사고, 시간을 보내는 소비자에 대한 오픈서베이의 오리지널
+              데이터를 만나보세요
+            </h2>
+            <a href="#">더 알아보기</a>
+          </div>
 
-            <div class="report-list">
-               <ul class="report-list-gnb">
-                  <li>
-                     <a href="#" class="report-mainmenu">
-                        <img src="images/img_search.png" alt="레포트이미지">
-                        트렌드 리포트
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="report-mainmenu">
-                        <img src="images/img_beauty.png" alt="레포트이미지">
-                        뷰티 카테고리 리포트
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="report-mainmenu">
-                        <img src="images/img_eat.png" alt="레포트이미지">
-                        Eat &amp; Buy 리포트
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="report-mainmenu">
-                        <img src="images/img_card.png   " alt="레포트이미지">
-                        푸드 다이어리
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="report-mainmenu">
-                        <img src="images/img_shopping.png" alt="레포트이미지">
-                        카드 결제 기록
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
+          <div class="report-list">
+            <ul class="report-list-gnb">
+              <li>
+                <a href="#" class="report-mainmenu">
+                  <img src="images/img_search.png" alt="레포트이미지" />
+                  트렌드 리포트
+                </a>
+              </li>
+              <li>
+                <a href="#" class="report-mainmenu">
+                  <img src="images/img_beauty.png" alt="레포트이미지" />
+                  뷰티 카테고리 리포트
+                </a>
+              </li>
+              <li>
+                <a href="#" class="report-mainmenu">
+                  <img src="images/img_eat.png" alt="레포트이미지" />
+                  Eat &amp; Buy 리포트
+                </a>
+              </li>
+              <li>
+                <a href="#" class="report-mainmenu">
+                  <img src="images/img_card.png   " alt="레포트이미지" />
+                  푸드 다이어리
+                </a>
+              </li>
+              <li>
+                <a href="#" class="report-mainmenu">
+                  <img src="images/img_shopping.png" alt="레포트이미지" />
+                  카드 결제 기록
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <!-- 데이터 -->
       <section class="data">
-         <div class="inner">
-            <div class="data-list clearfix">
-               <div class="data-list-right">
-                  <p>누적 기업 고객 수</p>
-                  <h2>2,047개 사</h2>
-               </div>
-               <div class="data-list-center">
-                  <p>연간 프로젝트 수</p>
-                  <h2>2,436개</h2>
-               </div>
-               <div class="data-list-left">
-                  <p>활성 패널 수</p>
-                  <h2>204,513명</h2>
-               </div>
+        <div class="inner">
+          <div class="data-list clearfix">
+            <div class="data-list-right">
+              <p>누적 기업 고객 수</p>
+              <h2>2,047개 사</h2>
             </div>
-         </div>
+            <div class="data-list-center">
+              <p>연간 프로젝트 수</p>
+              <h2>2,436개</h2>
+            </div>
+            <div class="data-list-left">
+              <p>활성 패널 수</p>
+              <h2>204,513명</h2>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- 슬라이드 -->
       <section class="slide">
-         <div class="inner">
-            <h2 class="slide-title">시대를 앞서가는 기업이
-               <br class="res-bar">
-               오픈서베이와 함께합니다.</h2>
-         </div>
-         <div class="slide-inner">
-            <div class="swiper-container sw-slide">
-               <div class="swiper-wrapper">
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newpg.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           계속해서 변하는 시장을 파악하기 위해 빠른 소비자 데이터 수집과 분석은 필수 요소가 되었습니다. Ad-hoc조사부터 다이어리 조사와 FGD까지,
-                           시장과 소비자에 대해 품고 있는 다양한 가설을 검증하기 위한 빠르고 정확한 전략이 바로 오픈서베이입니다.
-                        </p>
-                        <p class="slide-company">소비자시장전략본부
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">이지우 과장님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newcj.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “오픈서베이는 항상 소비자의 시선으로 제품을 만들려는 저희의 노력을 잘 이해하는 파트너입니다. 국내 주요 조사업체 중 가장 빠르게 소비자 의견을 수집할
-                           수 있으며, 데이터 자산을 함께
-                           쌓아가고 있어 더욱 든든합니다.“ </p>
-                        <p class="slide-company">한국) Trend&Insight
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">김강희 님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newbrothers.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “애자일한 개발 문화를 가진 테크 조직이 데이터를 보는 방식은 달라야 합니다.<br />
-                           오픈서베이의 놀라운 속도와 데이터 퀄리티, 모바일 환경에 대한 이해는 우아한형제들이 더욱 더 나은 사용자 경험을 고민하고 멋진 프로덕을 만드는데 도움을
-                           줍니다.“
-                        </p>
-                        <p class="slide-company">CX센터 프로덕트비저닝팀
-                           <!-- <span class="slide-dot"></span>
+        <div class="inner">
+          <h2 class="slide-title">
+            시대를 앞서가는 기업이
+            <br class="res-bar" />
+            오픈서베이와 함께합니다.
+          </h2>
+        </div>
+        <div class="slide-inner">
+          <div class="swiper-container sw-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newpg.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    계속해서 변하는 시장을 파악하기 위해 빠른 소비자 데이터
+                    수집과 분석은 필수 요소가 되었습니다. Ad-hoc조사부터
+                    다이어리 조사와 FGD까지, 시장과 소비자에 대해 품고 있는
+                    다양한 가설을 검증하기 위한 빠르고 정확한 전략이 바로
+                    오픈서베이입니다.
+                  </p>
+                  <p class="slide-company">
+                    소비자시장전략본부
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">이지우 과장님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newcj.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “오픈서베이는 항상 소비자의 시선으로 제품을 만들려는 저희의
+                    노력을 잘 이해하는 파트너입니다. 국내 주요 조사업체 중 가장
+                    빠르게 소비자 의견을 수집할 수 있으며, 데이터 자산을 함께
+                    쌓아가고 있어 더욱 든든합니다.“
+                  </p>
+                  <p class="slide-company">
+                    한국) Trend&Insight
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">김강희 님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newbrothers.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “애자일한 개발 문화를 가진 테크 조직이 데이터를 보는 방식은
+                    달라야 합니다.<br />
+                    오픈서베이의 놀라운 속도와 데이터 퀄리티, 모바일 환경에 대한
+                    이해는 우아한형제들이 더욱 더 나은 사용자 경험을 고민하고
+                    멋진 프로덕을 만드는데 도움을 줍니다.“
+                  </p>
+                  <p class="slide-company">
+                    CX센터 프로덕트비저닝팀
+                    <!-- <span class="slide-dot"></span>
                            <span class="slide-name"></span> -->
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newtoss.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “차별화되고 시의성 있는 브랜드 경험을 설계하기 위해서는 빠르고 정확한 브랜드 진단이 필요합니다. 토스는 오픈서베이와 함께 보다 객관적인 지표를
-                           확보하고, 정성적인 데이터를 수집을
-                           통해 브랜드 진단을 하고 있습니다.“
-                        </p>
-                        <p class="slide-company">Brand platform team
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">이정효 브랜드매니저님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newnexon.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “국내외 이용자의 생각과 행동 등 의미 있는 데이터를 빠르고 정확하게 수집할 수 있었습니다. 수집 이후 제공되는 오픈애널리틱스는 수집 된 데이터를 쉽고
-                           빠르게 분석해볼 수 있다는
-                           점에서 매우 편리합니다.“
-                        </p>
-                        <p class="slide-company">UX실
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">성병관 님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newriiid.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “세상에 없던 산업을 기존 방식으로 정의하기는 어렵습니다. 뤼이드는 오픈서베이와 함께 브랜드가 속한 카테고리를 정의하고 카테고리 전반과 브랜드
-                           퍼포먼스에 대한 소비자의 생각을 데이터로
-                           확인하고 있습니다.“ </p>
-                        <p class="slide-company">Global Brand Strategy
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">조세원 상무님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newwatcha.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “경쟁이 치열한 시장에서 대체 불가능한 서비스가 되기 위한 노력은 사용자와 시장에 대한 이해로부터 시작됩니다. 내부 데이터만으로 파악하기 힘든 시장
-                           전반 현황과 사용자의 태도와 생각을
-                           오픈서베이와 함께 촘촘히 살펴보고 있습니다.“
-                        </p>
-                        <p class="slide-company">마케팅팀
-                           <!-- <span class="slide-dot"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newtoss.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “차별화되고 시의성 있는 브랜드 경험을 설계하기 위해서는
+                    빠르고 정확한 브랜드 진단이 필요합니다. 토스는 오픈서베이와
+                    함께 보다 객관적인 지표를 확보하고, 정성적인 데이터를 수집을
+                    통해 브랜드 진단을 하고 있습니다.“
+                  </p>
+                  <p class="slide-company">
+                    Brand platform team
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">이정효 브랜드매니저님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newnexon.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “국내외 이용자의 생각과 행동 등 의미 있는 데이터를 빠르고
+                    정확하게 수집할 수 있었습니다. 수집 이후 제공되는
+                    오픈애널리틱스는 수집 된 데이터를 쉽고 빠르게 분석해볼 수
+                    있다는 점에서 매우 편리합니다.“
+                  </p>
+                  <p class="slide-company">
+                    UX실
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">성병관 님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newriiid.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “세상에 없던 산업을 기존 방식으로 정의하기는 어렵습니다.
+                    뤼이드는 오픈서베이와 함께 브랜드가 속한 카테고리를 정의하고
+                    카테고리 전반과 브랜드 퍼포먼스에 대한 소비자의 생각을
+                    데이터로 확인하고 있습니다.“
+                  </p>
+                  <p class="slide-company">
+                    Global Brand Strategy
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">조세원 상무님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newwatcha.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “경쟁이 치열한 시장에서 대체 불가능한 서비스가 되기 위한
+                    노력은 사용자와 시장에 대한 이해로부터 시작됩니다. 내부
+                    데이터만으로 파악하기 힘든 시장 전반 현황과 사용자의 태도와
+                    생각을 오픈서베이와 함께 촘촘히 살펴보고 있습니다.“
+                  </p>
+                  <p class="slide-company">
+                    마케팅팀
+                    <!-- <span class="slide-dot"></span>
                            <span class="slide-name"></span> -->
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newsocar.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “1위 브랜드일수록 더 체계적으로 브랜드 지표를 들여다볼 필요가 있습니다. 오픈서베이와의 브랜드 지표 트래킹은 브랜드 성장 단계와 경쟁 구도에 따라
-                           어떤 마케팅 목표를 수립하고 실행할
-                           것인가를 빠르게 판단할 수 있게 도와줍니다.“
-                        </p>
-                        <p class="slide-company">브랜드 그룹
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">김미루 그룹장님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newjejubeer.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “사용자 기반의 분석 플랫폼과 신속한 대응력 덕분에 브랜드를 관리하는 데 큰 도움이 되고 있습니다. 작은 요청에도 진정성있는 마인드와 서비스로
-                           답해주셔서, 좋은 파트너쉽을 이어나가고
-                           있습니다.“
-                        </p>
-                        <p class="slide-company">마케팅실
-                           <!-- <span class="slide-dot"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newsocar.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “1위 브랜드일수록 더 체계적으로 브랜드 지표를 들여다볼
+                    필요가 있습니다. 오픈서베이와의 브랜드 지표 트래킹은 브랜드
+                    성장 단계와 경쟁 구도에 따라 어떤 마케팅 목표를 수립하고
+                    실행할 것인가를 빠르게 판단할 수 있게 도와줍니다.“
+                  </p>
+                  <p class="slide-company">
+                    브랜드 그룹
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">김미루 그룹장님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newjejubeer.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “사용자 기반의 분석 플랫폼과 신속한 대응력 덕분에 브랜드를
+                    관리하는 데 큰 도움이 되고 있습니다. 작은 요청에도
+                    진정성있는 마인드와 서비스로 답해주셔서, 좋은 파트너쉽을
+                    이어나가고 있습니다.“
+                  </p>
+                  <p class="slide-company">
+                    마케팅실
+                    <!-- <span class="slide-dot"></span>
                            <span class="slide-name"></span> -->
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newebay.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “이커머스 서비스 사용 행태가 급격하게 변화함에 따라 다양한 사용자층을 이해하고 분석이 필요합니다. 까다로운 조건의 응답자도 빠르게 찾아내는
-                           오픈서베이의 정교한 타겟팅 시스템과 추가
-                           분석이 가능한 결과분석툴(교차분석)이 사용자 이해에 큰 도움이 되고 있습니다.“
-                        </p>
-                        <p class="slide-company">PXC, Product & Data Strategy cell
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">이슬기 매니저님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newobbeer.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “코로나 시대에도 맛에 대한 소비자의 평가를 포기할 수 없습니다. 오픈서베이의 비대면 HUT는 정확한 타겟팅과 모바일을 통한 사진 인증, 꼼꼼한 패널
-                           커뮤니케이션으로 진행됩니다.
-                           화상으로 전국의 소비자를 직접 인터뷰할 수도 있습니다.“
-                        </p>
-                        <p class="slide-company">인사이트팀
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">정병욱 선임부장님</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sw-section">
-                     <div class="sw-logo">
-                        <img src="images/newkakaostyle.png" alt="회사로고">
-                     </div>
-                     <div class="sw-right">
-                        <p class="slide-desc">
-                           “사용자 만족도와 파트너사와의 상생 모두 놓치지 않아야 커머스 플랫폼의 건강한 성장이 가능합니다. 지그재그는 오픈서베이와 함께 이들의 생생한 목소리를
-                           지속적으로 수집하고 데이터로 쌓아
-                           프로덕트와 전략에 반영해 나가고 있습니다.“
-                        </p>
-                        <p class="slide-company">브랜딩 그룹
-                           <span class="slide-dot"></span>
-                           <span class="slide-name">정영선 리더님</span>
-                        </p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="sw-control clearfix">
-                  <button class="sw-control-next">
-                     <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                  <button class="sw-control-prev">
-                     <i class="fa-solid fa-angle-left"></i>
-                  </button>
-               </div>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newebay.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “이커머스 서비스 사용 행태가 급격하게 변화함에 따라 다양한
+                    사용자층을 이해하고 분석이 필요합니다. 까다로운 조건의
+                    응답자도 빠르게 찾아내는 오픈서베이의 정교한 타겟팅 시스템과
+                    추가 분석이 가능한 결과분석툴(교차분석)이 사용자 이해에 큰
+                    도움이 되고 있습니다.“
+                  </p>
+                  <p class="slide-company">
+                    PXC, Product & Data Strategy cell
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">이슬기 매니저님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newobbeer.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “코로나 시대에도 맛에 대한 소비자의 평가를 포기할 수
+                    없습니다. 오픈서베이의 비대면 HUT는 정확한 타겟팅과 모바일을
+                    통한 사진 인증, 꼼꼼한 패널 커뮤니케이션으로 진행됩니다.
+                    화상으로 전국의 소비자를 직접 인터뷰할 수도 있습니다.“
+                  </p>
+                  <p class="slide-company">
+                    인사이트팀
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">정병욱 선임부장님</span>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide sw-section">
+                <div class="sw-logo">
+                  <img src="images/newkakaostyle.png" alt="회사로고" />
+                </div>
+                <div class="sw-right">
+                  <p class="slide-desc">
+                    “사용자 만족도와 파트너사와의 상생 모두 놓치지 않아야 커머스
+                    플랫폼의 건강한 성장이 가능합니다. 지그재그는 오픈서베이와
+                    함께 이들의 생생한 목소리를 지속적으로 수집하고 데이터로
+                    쌓아 프로덕트와 전략에 반영해 나가고 있습니다.“
+                  </p>
+                  <p class="slide-company">
+                    브랜딩 그룹
+                    <span class="slide-dot"></span>
+                    <span class="slide-name">정영선 리더님</span>
+                  </p>
+                </div>
+              </div>
             </div>
-         </div>
 
-         <div class="res-slide">
-            <div class="swiper-container res-sw-slide">
-               <div class="swiper-wrapper">
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newpg.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">소비자시장전략본부</p>
-                     <p class="res-slide-name">이지우 과장님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           계속해서 변하는 시장을 파악하기 위해 빠른 소비자 데이터 수집과 분석은 필수 요소가 되었습니다. Ad-hoc조사부터 다이어리 조사와 FGD까지,
-                           시장과 소비자에 대해 품고 있는 다양한 가설을 검증하기 위한 빠르고 정확한 전략이 바로 오픈서베이입니다.
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newcj.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">한국) Trend&Insight</p>
-                     <p class="res-slide-name">김강희 님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “오픈서베이는 항상 소비자의 시선으로 제품을 만들려는 저희의 노력을 잘 이해하는 파트너입니다. 국내 주요 조사업체 중 가장 빠르게 소비자 의견을 수집할
-                           수 있으며, 데이터 자산을 함께
-                           쌓아가고 있어 더욱 든든합니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newbrothers.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">CX센터 프로덕트비저닝팀</p>
-                     <p class="res-slide-name"></p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “애자일한 개발 문화를 가진 테크 조직이 데이터를 보는 방식은 달라야 합니다.<br />
-                           오픈서베이의 놀라운 속도와 데이터 퀄리티, 모바일 환경에 대한 이해는 우아한형제들이 더욱 더 나은 사용자 경험을 고민하고 멋진 프로덕을 만드는데 도움을
-                           줍니다.“ </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newtoss.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">Brand platform team</p>
-                     <p class="res-slide-name">이정효 브랜드매니저님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “차별화되고 시의성 있는 브랜드 경험을 설계하기 위해서는 빠르고 정확한 브랜드 진단이 필요합니다. 토스는 오픈서베이와 함께 보다 객관적인 지표를
-                           확보하고, 정성적인 데이터를 수집을
-                           통해 브랜드 진단을 하고 있습니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newnexon.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">UX실</p>
-                     <p class="res-slide-name">성병관 님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “국내외 이용자의 생각과 행동 등 의미 있는 데이터를 빠르고 정확하게 수집할 수 있었습니다. 수집 이후 제공되는 오픈애널리틱스는 수집 된 데이터를 쉽고
-                           빠르게 분석해볼 수 있다는
-                           점에서 매우 편리합니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newriiid.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">Global Brand Strategy</p>
-                     <p class="res-slide-name">조세원 상무님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “세상에 없던 산업을 기존 방식으로 정의하기는 어렵습니다. 뤼이드는 오픈서베이와 함께 브랜드가 속한 카테고리를 정의하고 카테고리 전반과 브랜드
-                           퍼포먼스에 대한 소비자의 생각을 데이터로
-                           확인하고 있습니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newwatcha.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">마케팅팀</p>
-                     <p class="res-slide-name"></p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “경쟁이 치열한 시장에서 대체 불가능한 서비스가 되기 위한 노력은 사용자와 시장에 대한 이해로부터 시작됩니다. 내부 데이터만으로 파악하기 힘든 시장
-                           전반 현황과 사용자의 태도와 생각을
-                           오픈서베이와 함께 촘촘히 살펴보고 있습니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newsocar.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">브랜드 그룹</p>
-                     <p class="res-slide-name">김미루 그룹장님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “1위 브랜드일수록 더 체계적으로 브랜드 지표를 들여다볼 필요가 있습니다. 오픈서베이와의 브랜드 지표 트래킹은 브랜드 성장 단계와 경쟁 구도에 따라
-                           어떤 마케팅 목표를 수립하고 실행할
-                           것인가를 빠르게 판단할 수 있게 도와줍니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newjejubeer.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">마케팅실</p>
-                     <p class="res-slide-name"></p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “사용자 기반의 분석 플랫폼과 신속한 대응력 덕분에 브랜드를 관리하는 데 큰 도움이 되고 있습니다. 작은 요청에도 진정성있는 마인드와 서비스로
-                           답해주셔서, 좋은 파트너쉽을 이어나가고
-                           있습니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newebay.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">PXC, Product & Data Strategy cell</p>
-                     <p class="res-slide-name">이슬기 매니저님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “이커머스 서비스 사용 행태가 급격하게 변화함에 따라 다양한 사용자층을 이해하고 분석이 필요합니다. 까다로운 조건의 응답자도 빠르게 찾아내는
-                           오픈서베이의 정교한 타겟팅 시스템과 추가
-                           분석이 가능한 결과분석툴(교차분석)이 사용자 이해에 큰 도움이 되고 있습니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newobbeer.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">인사이트팀</p>
-                     <p class="res-slide-name">정병욱 선임부장님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “코로나 시대에도 맛에 대한 소비자의 평가를 포기할 수 없습니다. 오픈서베이의 비대면 HUT는 정확한 타겟팅과 모바일을 통한 사진 인증, 꼼꼼한 패널
-                           커뮤니케이션으로 진행됩니다.
-                           화상으로 전국의 소비자를 직접 인터뷰할 수도 있습니다.“
-                        </p>
-
-                     </div>
-                  </div>
-
-                  <div class="swiper-slide res-sw-section">
-                     <div class="res-sw-logo">
-                        <img src="images/newkakaostyle.png" alt="회사로고">
-                     </div>
-                     <p class="res-slide-company">브랜딩 그룹</p>
-                     <p class="res-slide-name">정영선 리더님</p>
-                     <div class="res-sw-right">
-                        <p class="res-slide-desc">
-                           “사용자 만족도와 파트너사와의 상생 모두 놓치지 않아야 커머스 플랫폼의 건강한 성장이 가능합니다. 지그재그는 오픈서베이와 함께 이들의 생생한 목소리를
-                           지속적으로 수집하고 데이터로 쌓아
-                           프로덕트와 전략에 반영해 나가고 있습니다.“
-                        </p>
-
-
-                     </div>
-                  </div>
-
-               </div>
+            <div class="sw-control clearfix">
+              <button class="sw-control-next">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+              <button class="sw-control-prev">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
             </div>
-         </div>
+          </div>
+        </div>
 
+        <div class="res-slide">
+          <div class="swiper-container res-sw-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newpg.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">소비자시장전략본부</p>
+                <p class="res-slide-name">이지우 과장님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    계속해서 변하는 시장을 파악하기 위해 빠른 소비자 데이터
+                    수집과 분석은 필수 요소가 되었습니다. Ad-hoc조사부터
+                    다이어리 조사와 FGD까지, 시장과 소비자에 대해 품고 있는
+                    다양한 가설을 검증하기 위한 빠르고 정확한 전략이 바로
+                    오픈서베이입니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newcj.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">한국) Trend&Insight</p>
+                <p class="res-slide-name">김강희 님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “오픈서베이는 항상 소비자의 시선으로 제품을 만들려는 저희의
+                    노력을 잘 이해하는 파트너입니다. 국내 주요 조사업체 중 가장
+                    빠르게 소비자 의견을 수집할 수 있으며, 데이터 자산을 함께
+                    쌓아가고 있어 더욱 든든합니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newbrothers.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">CX센터 프로덕트비저닝팀</p>
+                <p class="res-slide-name"></p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “애자일한 개발 문화를 가진 테크 조직이 데이터를 보는 방식은
+                    달라야 합니다.<br />
+                    오픈서베이의 놀라운 속도와 데이터 퀄리티, 모바일 환경에 대한
+                    이해는 우아한형제들이 더욱 더 나은 사용자 경험을 고민하고
+                    멋진 프로덕을 만드는데 도움을 줍니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newtoss.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">Brand platform team</p>
+                <p class="res-slide-name">이정효 브랜드매니저님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “차별화되고 시의성 있는 브랜드 경험을 설계하기 위해서는
+                    빠르고 정확한 브랜드 진단이 필요합니다. 토스는 오픈서베이와
+                    함께 보다 객관적인 지표를 확보하고, 정성적인 데이터를 수집을
+                    통해 브랜드 진단을 하고 있습니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newnexon.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">UX실</p>
+                <p class="res-slide-name">성병관 님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “국내외 이용자의 생각과 행동 등 의미 있는 데이터를 빠르고
+                    정확하게 수집할 수 있었습니다. 수집 이후 제공되는
+                    오픈애널리틱스는 수집 된 데이터를 쉽고 빠르게 분석해볼 수
+                    있다는 점에서 매우 편리합니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newriiid.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">Global Brand Strategy</p>
+                <p class="res-slide-name">조세원 상무님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “세상에 없던 산업을 기존 방식으로 정의하기는 어렵습니다.
+                    뤼이드는 오픈서베이와 함께 브랜드가 속한 카테고리를 정의하고
+                    카테고리 전반과 브랜드 퍼포먼스에 대한 소비자의 생각을
+                    데이터로 확인하고 있습니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newwatcha.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">마케팅팀</p>
+                <p class="res-slide-name"></p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “경쟁이 치열한 시장에서 대체 불가능한 서비스가 되기 위한
+                    노력은 사용자와 시장에 대한 이해로부터 시작됩니다. 내부
+                    데이터만으로 파악하기 힘든 시장 전반 현황과 사용자의 태도와
+                    생각을 오픈서베이와 함께 촘촘히 살펴보고 있습니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newsocar.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">브랜드 그룹</p>
+                <p class="res-slide-name">김미루 그룹장님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “1위 브랜드일수록 더 체계적으로 브랜드 지표를 들여다볼
+                    필요가 있습니다. 오픈서베이와의 브랜드 지표 트래킹은 브랜드
+                    성장 단계와 경쟁 구도에 따라 어떤 마케팅 목표를 수립하고
+                    실행할 것인가를 빠르게 판단할 수 있게 도와줍니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newjejubeer.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">마케팅실</p>
+                <p class="res-slide-name"></p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “사용자 기반의 분석 플랫폼과 신속한 대응력 덕분에 브랜드를
+                    관리하는 데 큰 도움이 되고 있습니다. 작은 요청에도
+                    진정성있는 마인드와 서비스로 답해주셔서, 좋은 파트너쉽을
+                    이어나가고 있습니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newebay.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">
+                  PXC, Product & Data Strategy cell
+                </p>
+                <p class="res-slide-name">이슬기 매니저님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “이커머스 서비스 사용 행태가 급격하게 변화함에 따라 다양한
+                    사용자층을 이해하고 분석이 필요합니다. 까다로운 조건의
+                    응답자도 빠르게 찾아내는 오픈서베이의 정교한 타겟팅 시스템과
+                    추가 분석이 가능한 결과분석툴(교차분석)이 사용자 이해에 큰
+                    도움이 되고 있습니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newobbeer.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">인사이트팀</p>
+                <p class="res-slide-name">정병욱 선임부장님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “코로나 시대에도 맛에 대한 소비자의 평가를 포기할 수
+                    없습니다. 오픈서베이의 비대면 HUT는 정확한 타겟팅과 모바일을
+                    통한 사진 인증, 꼼꼼한 패널 커뮤니케이션으로 진행됩니다.
+                    화상으로 전국의 소비자를 직접 인터뷰할 수도 있습니다.“
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide res-sw-section">
+                <div class="res-sw-logo">
+                  <img src="images/newkakaostyle.png" alt="회사로고" />
+                </div>
+                <p class="res-slide-company">브랜딩 그룹</p>
+                <p class="res-slide-name">정영선 리더님</p>
+                <div class="res-sw-right">
+                  <p class="res-slide-desc">
+                    “사용자 만족도와 파트너사와의 상생 모두 놓치지 않아야 커머스
+                    플랫폼의 건강한 성장이 가능합니다. 지그재그는 오픈서베이와
+                    함께 이들의 생생한 목소리를 지속적으로 수집하고 데이터로
+                    쌓아 프로덕트와 전략에 반영해 나가고 있습니다.“
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-
-
-
 
       <!-- 문의 -->
       <section class="require">
-         <div class="inner">
-            <div class="require-main">
-               <div class="require-top">
-                  <h2 class="require-title">지금 바로 문의하세요</h2>
+        <div class="inner">
+          <div class="require-main">
+            <div class="require-top">
+              <h2 class="require-title">지금 바로 문의하세요</h2>
 
-                  <p>비지니스 고민만 가져오세요.</p>
-                  <p>오픈서베이 팀이 최적의 솔루션을 제안합니다.</p>
-                  <a href="#" class="require-btn">문의하기</a>
-               </div>
+              <p>비지니스 고민만 가져오세요.</p>
+              <p>오픈서베이 팀이 최적의 솔루션을 제안합니다.</p>
+              <a href="#" class="require-btn">문의하기</a>
             </div>
-         </div>
+          </div>
+        </div>
       </section>
       <!-- 푸터 -->
       <footer class="footer">
-         <div class="inner">
-            <div class="footer-top clearfix">
-               <a href="#" class="footer-logo"></a>
-               <div class="footer-list clearfix">
-                  <ul class="footer-depth1 clearfix">
-                     <li><a href="#">뉴스레터 신청</a></li>
-                     <li><a href="#">블로그</a></li>
-                     <li><a href="#">커리어</a></li>
-                     <li><a href="#">고객센터</a></li>
-                  </ul>
-               </div>
-               <div class="footer-logo-list clearfix">
-                  <a href="#" class="footer-fb"></a>
-                  <a href="#" class="footer-nv"></a>
-               </div>
+        <div class="inner">
+          <div class="footer-top clearfix">
+            <a href="#" class="footer-logo"></a>
+            <div class="footer-list clearfix">
+              <ul class="footer-depth1 clearfix">
+                <li><a href="#">뉴스레터 신청</a></li>
+                <li><a href="#">블로그</a></li>
+                <li><a href="#">커리어</a></li>
+                <li><a href="#">고객센터</a></li>
+              </ul>
             </div>
+            <div class="footer-logo-list clearfix">
+              <a href="#" class="footer-fb"></a>
+              <a href="#" class="footer-nv"></a>
+            </div>
+          </div>
 
-            <div class="footer-bottom clearfix">
-               <div class="footer-bottom-left">
-                  <ul class="address-list">
-                     <li><a href="#">주식회사 오픈서베이</a></li>
-                     <li><a href="#">대표 황희영</a></li>
-                     <li><a href="#">서울특별시 강남구 강남대로84길 13, 12~15층(역삼동, 케이알타워)</a></li>
-                  </ul>
-                  <ul class="address-info">
-                     <li><a href="#">사업자번호 : 106-86-77081</a></li>
-                     <li><a href="#">통신판매업 신고번호 : 2022-서울강남-04044</a></li>
-                     <li><a href="#">02-2070-2110</a></li>
-                  </ul>
-                  <p class="copy">&copy;Opensurvey Inc.</p>
-               </div>
-               <div class="footer-bottom-right clearfix">
-                  <ul class="footer-depth2">
-                     <li><a href="#" class="footer-use">이용약관</a></li>
-                     <li><a href="#" class="footer-info">개인정보처리방침</a></li>
-                  </ul>
-               </div>
+          <div class="footer-bottom clearfix">
+            <div class="footer-bottom-left">
+              <ul class="address-list">
+                <li><a href="#">주식회사 오픈서베이</a></li>
+                <li><a href="#">대표 황희영</a></li>
+                <li>
+                  <a href="#"
+                    >서울특별시 강남구 강남대로84길 13, 12~15층(역삼동,
+                    케이알타워)</a
+                  >
+                </li>
+              </ul>
+              <ul class="address-info">
+                <li><a href="#">사업자번호 : 106-86-77081</a></li>
+                <li>
+                  <a href="#">통신판매업 신고번호 : 2022-서울강남-04044</a>
+                </li>
+                <li><a href="#">02-2070-2110</a></li>
+              </ul>
+              <p class="copy">&copy;Opensurvey Inc.</p>
             </div>
-         </div>
+            <div class="footer-bottom-right clearfix">
+              <ul class="footer-depth2">
+                <li><a href="#" class="footer-use">이용약관</a></li>
+                <li><a href="#" class="footer-info">개인정보처리방침</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
-   </div>
-</body>
-
+    </div>
+  </body>
 </html>

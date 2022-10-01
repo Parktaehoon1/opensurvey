@@ -1,5 +1,4 @@
 window.onload = function () {
-  // 모달창
   let modalWrap = $(".modal-wrap");
   let modalClose = $(".modal-close");
 
@@ -19,6 +18,12 @@ window.onload = function () {
     modalWrap.stop().fadeOut(500);
     // 추가기능 : 스크롤바 살리기
     // $('html').css('overflow', 'auto');
+  });
+  $("html").keydown(function (key) {
+    if (key.keyCode == 13) {
+      modalWrap.stop().fadeOut(200);
+      $("html").css("overflow", "auto");
+    }
   });
   $("html").keydown(function (key) {
     if (key.keyCode == 13) {
